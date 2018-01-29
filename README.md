@@ -1,10 +1,10 @@
 
-# Vuedo ![logo](http://i.imgur.com/iBEAx7O.png?2)
+# DMS ![logo](http://i.imgur.com/iBEAx7O.png?2)
 [![Build Status](https://travis-ci.org/Vuedo/vuedo.svg?branch=master)](https://travis-ci.org/Vuedo/vuedo) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 
-## What is Vuedo?
+## What is DMS?
 
-Vuedo is an open source project built with Laravel and Vue.js. It is a live example of how everything works together.
+DMS is an open source project built with Laravel v5.2 and Vue.js v1.0 and Vuedo v0.0.1. It is a live example of how everything works together.
 
 ## Website using Vuedo in production : [https://vuejs-news.com](https://vuejs-news.com)
 
@@ -19,7 +19,6 @@ Vue.js News is a place where News, Tutorials, Plugins, Showcases and more things
 * User Roles
 * Content moderation
 * Markdown Editor
-* Amazon S3 integration
 * and more...
 
 ## Installation
@@ -52,7 +51,7 @@ Soon a roadmap for contribution will be added so everyone will be welcome to joi
 
 ## Stay In Touch
 
-For latest releases and announcements, follow on Twitter: [@vuedo](https://twitter.com/vuedo)
+For latest releases and announcements, follow on Twitter: [@vuedo](https://twitter.com/vuedo) and Github: [@vuedo](https://github.com/Vuedo/vuedo)
 
 ## License
 
