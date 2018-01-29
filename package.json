@@ -15,7 +15,7 @@
     "css-loader": "^0.23.1",
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
-    "jquery": "^2.2.3",
+    "jquery": "^3.0.0",
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-livereload": "~1.1.6",
     "laravel-elixir-vueify": "^1.0.3",
