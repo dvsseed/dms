@@ -1,0 +1,42 @@
+{"events":[{"replyToken":"00000000000000000000000000000000","type":"message","timestamp":1451617200000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100001","type":"text","text":"Hello,world"}},{"replyToken":"ffffffffffffffffffffffffffffffff","type":"message","timestamp":1451617210000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100002","type":"sticker","packageId":"1","stickerId":"1"}}]}
+{"replyToken":"00000000000000000000000000000000","messages":[{"type":"text","text":"Hello,world"}]}
+{"message":"Invalid reply token"}
+{"events":[{"type":"message","replyToken":"09a382dcaed6444386c2785a831c1176","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501814740394,"message":{"type":"text","id":"6490399221608","text":"test"}}]}
+{"replyToken":"09a382dcaed6444386c2785a831c1176","messages":[{"type":"text","text":"test"}]}
+{}
+{"events":[{"type":"message","replyToken":"68f55173d8154d689d0dd8b73e6baad9","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501814794005,"message":{"type":"text","id":"6490402463829","text":"你好嗎"}}]}
+{"replyToken":"68f55173d8154d689d0dd8b73e6baad9","messages":[{"type":"text","text":"\u4f60\u597d\u55ce"}]}
+{}
+{"events":[{"replyToken":"00000000000000000000000000000000","type":"message","timestamp":1451617200000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100001","type":"text","text":"Hello,world"}},{"replyToken":"ffffffffffffffffffffffffffffffff","type":"message","timestamp":1451617210000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100002","type":"sticker","packageId":"1","stickerId":"1"}}]}
+{"replyToken":"00000000000000000000000000000000","messages":[{"type":"text","text":"Hello,world"}]}
+{"message":"Invalid reply token"}
+{"events":[{"type":"message","replyToken":"dd4abaf3527d406fba655692a2aeaa94","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501834690848,"message":{"type":"text","id":"6491715947915","text":"人"}}]}
+{"replyToken":"dd4abaf3527d406fba655692a2aeaa94","messages":[{"type":"text","text":"\u4eba"}]}
+{}
+{"events":[{"type":"message","replyToken":"dbf24b8f0f21422c8d12f5b39691f14b","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501835034906,"message":{"type":"text","id":"6491741522205","text":"hello"}}]}
+{"replyToken":"dbf24b8f0f21422c8d12f5b39691f14b","messages":[{"type":"text","text":"hello"}]}
+{}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}
+{"events":[{"type":"message","replyToken":"ed5f06ec6ca3464ebdfe554c9e412e99","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501838773147,"message":{"type":"text","id":"6492036981860","text":"i"}}]}
+{"replyToken":"ed5f06ec6ca3464ebdfe554c9e412e99","messages":[{"type":"text","text":"i"}]}
+{}
+{"events":[{"type":"message","replyToken":"e32801bc74a54c14aea3f7617e4c187c","source":{"userId":"Ue71d86975eaa8756c644e32c323a5072","type":"user"},"timestamp":1501841622251,"message":{"type":"text","id":"6492277256512","text":"只會回字"}}]}
+{"replyToken":"e32801bc74a54c14aea3f7617e4c187c","messages":[{"type":"text","text":"\u53ea\u6703\u56de\u5b57"}]}
+{}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}
+
+{"replyToken":null,"messages":[{"type":"text","text":null}]}
+{"message":"The request body has 2 error(s)","details":[{"message":"May not be empty","property":"messages[0].text"},{"message":"May not be empty","property":"replyToken"}]}

@@ -1,0 +1,32 @@
+{
+    "name": "vdb/php-spider",
+    "type": "application",
+    "description": "A configurable and extensible PHP web spider",
+    "keywords": ["spider", "crawler", "scraper"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthijs van den Bos",
+            "email": "matthijs@vandenbos.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/matthijsvandenbos/php-spider/issues",
+        "source": "https://github.com/matthijsvandenbos/php-spider"
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.0.0",
+        "symfony/css-selector": "^3.0.0",
+        "symfony/dom-crawler": "^3.0.0",
+        "symfony/finder": "^3.0.0",
+        "symfony/event-dispatcher": "^3.0.0",
+        "vdb/uri": "^0.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "VDB\\Spider": "src/",
+            "VDB\\Spider\\Tests": "tests/"
+        }
+    }
+}

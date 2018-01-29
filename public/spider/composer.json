@@ -1,0 +1,5 @@
+{
+    "require": {
+        "vdb/php-spider": "^0.3.0"
+    }
+}

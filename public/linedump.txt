@@ -1,0 +1,2384 @@
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "6bb76acaabf648ffb72444fe44d8c3e8"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484208746830)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490589650670"
+        ["text"]=>
+        string(5) "test4"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "15fddb916ca640bb9c7b9e3cc5f65746"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484208835057)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490595293316"
+        ["text"]=>
+        string(5) "test5"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "ebfe521d8fc442c5be6b7f69991ea334"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484208940382)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490602026560"
+        ["text"]=>
+        string(9) "問電話"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "8dfbc06c98914eb4adacfcdaa03d7d85"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484209440039)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490634409631"
+        ["text"]=>
+        string(6) "電話"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "6924ab88c13041c2beee19786aeb32a4"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210008790)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490671996705"
+        ["text"]=>
+        string(6) "怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "9eb1c69169d04d27ac155d2a019afebd"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210093354)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490677675325"
+        ["text"]=>
+        string(6) "怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "16df109f9a214896bbfdb5a3cd7402a6"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U12f7bb9ce1370459e52e611d7826968d"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210429141)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "d86d720399774e1389dda6fc9b403a7b"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U12f7bb9ce1370459e52e611d7826968d"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210454913)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490702097677"
+        ["text"]=>
+        string(6) "怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7a51ac44a51c4501bfab1c3edcf17178"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U12f7bb9ce1370459e52e611d7826968d"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210519527)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490706495988"
+        ["text"]=>
+        string(9) "李怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "09da339e7d6b4c97bcd7df055de81515"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U12f7bb9ce1370459e52e611d7826968d"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484210559150)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490709191314"
+        ["text"]=>
+        string(6) "苑菁"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "ee6cf77071284ce38f070a93ef6bf54a"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U12f7bb9ce1370459e52e611d7826968d"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484211390779)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490766738517"
+        ["text"]=>
+        string(6) "苑菁"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "7b7b66712c044fe980b73a87686b0aed"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U388a9d90b6646a65138db23ef044a7c8"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484211573897)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "0757f93cd4b9460f8024b36774bebe7b"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484211681842)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7b308afd47bb4bfa9f5779268144040c"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484211713169)
+      ["message"]=>
+      array(4) {
+        ["type"]=>
+        string(7) "sticker"
+        ["id"]=>
+        string(13) "5490789473995"
+        ["stickerId"]=>
+        string(8) "12689228"
+        ["packageId"]=>
+        string(7) "1314324"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "5ac1426b7c004b42ac85af3025d91d04"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484211834668)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490798143709"
+        ["text"]=>
+        string(6) "鏡儒"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "2295e3bbe7124f18a9851b540a338e79"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484212211654)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(3) {
+      ["type"]=>
+      string(8) "unfollow"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484212241897)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "7a2b18eeef354da7ad12df38eaaa6f0e"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484212249802)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "a48ccf2b44184a72975b7c21ac324509"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484212266055)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490829041580"
+        ["text"]=>
+        string(6) "惠苓"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "91077c22ffd04d6b92663cf74f3380f2"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U584363b19db3aa1a774c1dad43bc7276"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484213410029)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "2657a8bfc3cc4ca98b751a33cf9743b4"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U584363b19db3aa1a774c1dad43bc7276"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484213450890)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490915276630"
+        ["text"]=>
+        string(6) "芳宜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "e42d3b1b9d3a4312a01018c72e8e61e9"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484214287687)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "43d76a3da41b499fbaf384d4e3f07a6c"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484214313209)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490978731926"
+        ["text"]=>
+        string(6) "小映"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "561f513d8fc54e5d81e4de3c9d3272cb"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484214325147)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5490979615089"
+        ["text"]=>
+        string(6) "苑菁"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "4e70e432991e4e14b911589efd4b6196"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215490762)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491066510053"
+        ["text"]=>
+        string(3) "順"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "549fd078a7824404bb9afce5997962e1"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215515195)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491068325131"
+        ["text"]=>
+        string(6) "順子"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "abaa14c983924ab8988e347033dd29b9"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215528595)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491069315460"
+        ["text"]=>
+        string(6) "黃煜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "44bb3c7caf3e445bb81eb1ef66f380f4"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215542765)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491070360269"
+        ["text"]=>
+        string(6) "一萍"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "acb53165a91548e486faedcb101df0eb"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215561116)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491071710075"
+        ["text"]=>
+        string(3) "映"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "f430529fa0644e5ea6474a76cf8ed7f5"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U30d01166b8f313bd4768f4ad8876c0d0"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484215574487)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491072688451"
+        ["text"]=>
+        string(6) "小映"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "24dcb45f9d1c44d2a11f16d559e71b10"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484217804675)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5491237361954"
+        ["text"]=>
+        string(6) "醫師"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "92715610ba3f4c32bc52b37fb4bada30"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U388a9d90b6646a65138db23ef044a7c8"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484255180354)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5493441807828"
+        ["text"]=>
+        string(6) "怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7a6240154c094df7bf8ca26567ed2945"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U388a9d90b6646a65138db23ef044a7c8"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484255192944)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5493442074620"
+        ["text"]=>
+        string(6) "小映"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["type"]=>
+      string(6) "follow"
+      ["replyToken"]=>
+      string(32) "c517c6b31b3049e78dab5a8b2ba57092"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U85fd066534efb62ecccf1d4bc2d55e77"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484294382122)
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7b31fe79718f4c53a3245713751e3c25"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484312133613)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5496719577977"
+        ["text"]=>
+        string(6) "令燊"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "a978542e17944c6b8b0549162aec46ac"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484312518315)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5496757347059"
+        ["text"]=>
+        string(9) "黃琬婷"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "bc3b7fc57f5b4bbea9a98f4e5bcd3f42"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484312687338)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5496773697301"
+        ["text"]=>
+        string(9) "黃淑珍"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "23f156d905694dfcbbbeb8b90d9fe535"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Uded842a35efec7e7050522b2135524c1"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1484885126135)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5527721373741"
+        ["text"]=>
+        string(6) "婉瑜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "b72c2914aee24817996ea48aa3ef3dc1"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1485240610632)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5546864832672"
+        ["text"]=>
+        string(6) "黃煜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "38142322f09d46639b245e083cc0be53"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1485240619182)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5546865318406"
+        ["text"]=>
+        string(9) "黃煜順"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "6addc6f5088c47edac6ee48856468c16"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1485386584171)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5554850912524"
+        ["text"]=>
+        string(9) "游莉君"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "f5fc0c3e13934e3cbce46b4508527215"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1486111831320)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5594265847805"
+        ["text"]=>
+        string(6) "令燊"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7492379df9954506a547208160a09c79"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1487756454701)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5684286491466"
+        ["text"]=>
+        string(9) "吳婉瑜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "39ff89a5b09943d08b2e13e7f2a9889f"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1487756498982)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5684289926303"
+        ["text"]=>
+        string(6) "胡惠"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "829c9da506f1431cafc9352a02a7374e"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1487756509522)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5684290739069"
+        ["text"]=>
+        string(9) "胡惠苓"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "52d5462ea81a4ad8837df11fc865fafe"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1487756680818)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5684304012843"
+        ["text"]=>
+        string(9) "馮淑華"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "bae1a5e74595491193f726dbfcdf2cde"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1489127745947)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5760033855458"
+        ["text"]=>
+        string(9) "黃煜順"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "6fc174fcd139464090b7305b7de7b0ec"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1489130129974)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5760183014434"
+        ["text"]=>
+        string(9) "游能俊"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "0302e5fee7454837b433811ab3223777"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1489137198196)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5760678062516"
+        ["text"]=>
+        string(9) "黃婉婷"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "38e77f7915cc48ed8c8d7b6c6ac5f336"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1489137208417)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5760678874930"
+        ["text"]=>
+        string(9) "黃琬婷"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "aad0ad04b1cd489c8f6f18845b8aebbe"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1492251430433)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5941204596298"
+        ["text"]=>
+        string(9) "周玉琴"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "4fdf521ef38944d58bbc354de43612a5"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1492254873068)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5941453313196"
+        ["text"]=>
+        string(9) "盧曉葦"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "02beff25adbe4c6fa73a8eba2c2e46e8"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1492663413138)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "5964331162590"
+        ["text"]=>
+        string(9) "游莉君"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "102ecf09b431416a89ea3193bcc3d5f6"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1493945782043)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6037773202112"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "7f8eca003e7948acbb304af0f0fd2625"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1497589420880)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6247145250106"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "0559426b06ae475498a30c9a1267aeb3"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1498035036919)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6272664159467"
+        ["text"]=>
+        string(10) " 游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "75595ae2ea5447f8b008479153994380"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1499525095386)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6358093485030"
+        ["text"]=>
+        string(9) "游能俊"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "f96af226f89e4acf8275aef4943d8cb8"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1499680523402)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6366044322852"
+        ["text"]=>
+        string(11) " 黃琬婷
+"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "99c1e30eac0144e1a709ec5b492c0025"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1500203755092)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6396368155995"
+        ["text"]=>
+        string(9) "李怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "bd63e2a593c348a9ba947e80a8d05ffa"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1500702399841)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6425320992751"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "fcc874d221f14c7889fc89835a454281"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1500944996632)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6439049550903"
+        ["text"]=>
+        string(9) "吳嘉玲"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "67de64c3b62c43a5b1f6ee20cfbe51e6"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1500945006340)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6439050042539"
+        ["text"]=>
+        string(9) "吳嘉鈴"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "b67e97b15c4440088ffe2496f8b7a090"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501050129564)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6445410561841"
+        ["text"]=>
+        string(6) "佳惠"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "aa6ff35e1ccd4f86bd2d924ef010d2b9"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501050190995)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6445413988594"
+        ["text"]=>
+        string(6) "婉瑜"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "960d799f78d145e6bdb187a688834b09"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501050249715)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6445417280758"
+        ["text"]=>
+        string(6) "曉瑋"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "a383a39370c24c2abf62235a23b365f4"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501050256319)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6445417648976"
+        ["text"]=>
+        string(3) "盧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "0eec42795e6f4f90bd91e80a47026e11"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "Ub114d8cc7447bae393fed29f2601987a"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501050302620)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6445420234688"
+        ["text"]=>
+        string(9) "盧曉葦"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "c6532dc6918545859caa690f1604d2e3"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1501081756837)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6448127167979"
+        ["text"]=>
+        string(9) "李怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "d95e0e613e064b19a2c0bcb853e20976"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1502079674403)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6505678545337"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "b9eabf497f764b8998ee981308e02476"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1505197071773)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6684331585358"
+        ["text"]=>
+        string(10) " 黃琬婷"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "3e06c87614af4bbdbd51992f083409ac"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1505210828554)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6685265581707"
+        ["text"]=>
+        string(9) "李怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "a292d08a26ba4ee39ad469f2ef47c928"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1506129167965)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6737421038928"
+        ["text"]=>
+        string(9) "林呈蔚"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "d8345dd074364ad8aa8469310bdc9f57"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1508571456573)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6873079749355"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "43ab933b2d7145aca2a1934d8d4277cf"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1509683443689)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6934322305003"
+        ["text"]=>
+        string(10) " 林宛均"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "deb37f9ed44140f0b161015ae95de8ca"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1509940161413)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6947898573193"
+        ["text"]=>
+        string(9) "游昕慈"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "d8f56ed82558494bb17f24d11936c380"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1510378667067)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6971804063825"
+        ["text"]=>
+        string(9) "李怡慧"
+      }
+    }
+  }
+}
+
+=====================================
+array(1) {
+  ["events"]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["type"]=>
+      string(7) "message"
+      ["replyToken"]=>
+      string(32) "2950b848da3b4fc18057d863669de20d"
+      ["source"]=>
+      array(2) {
+        ["userId"]=>
+        string(33) "U35fb5c52cfdc5b002aabebf7e92937e5"
+        ["type"]=>
+        string(4) "user"
+      }
+      ["timestamp"]=>
+      int(1510455898071)
+      ["message"]=>
+      array(3) {
+        ["type"]=>
+        string(4) "text"
+        ["id"]=>
+        string(13) "6975743187235"
+        ["text"]=>
+        string(9) "馮淑華"
+      }
+    }
+  }
+}
+
+=====================================

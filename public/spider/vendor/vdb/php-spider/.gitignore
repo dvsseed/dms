@@ -1,0 +1,11 @@
+.idea
+composer.lock
+vendor
+TODO.md
+build
+example/logs/*.log
+example/results
+*.doctrinecache.php
+.DS_Store
+cache.properties
+.tmp
