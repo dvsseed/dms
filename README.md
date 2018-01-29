@@ -32,10 +32,13 @@ Run the following commands:
 ```
 composer install
 npm install
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
+gulp
 php artisan serve
 ```
+If you are making changes to JavaScript or Styles make sure you run gulp watch.
 
 ## Technical Description
 
