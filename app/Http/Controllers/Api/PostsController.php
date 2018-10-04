@@ -32,7 +32,7 @@ class PostsController extends ApiController
     public function index(Request $request)
     {
         return $this->respondWith(
-            Post::orderBy('created_at', 'DESC')->paginate(10)->appends(['include' => $request->input('include')]),
+            Post::withPostponed()->orderBy('created_at', 'DESC')->paginate(10)->appends(['include' => $request->input('include')]),
             new PostTransformer
         );
     }
@@ -46,6 +46,10 @@ class PostsController extends ApiController
      */
     public function store(Request $request)
     {
+//        return $this->respondWithArray([
+//            'error' => true,
+//            'message' => 111
+//        ]);
         $post = new Post;
 //        $post->title = hash('adler32', time());
         $post->title = '請輸入文章標題';
@@ -106,13 +110,12 @@ class PostsController extends ApiController
                     $media->delete();
                 }
             }
-            //when we are working on local don't upload images to s3
+            // when we are working on local don't upload images to s3
             if( env('APP_ENV') == 'local'){
                 $post->addMedia($request->file('file'))->preservingOriginal()->toCollectionOnDisk('featured', 'local-media');
             } else {
                 $post->addMedia($request->file('file'))->preservingOriginal()->toMediaLibrary('featured');
             }
-
         }
         else {
             return $this->errorWrongArgs("No image submited.");
@@ -134,6 +137,9 @@ class PostsController extends ApiController
      */
     public function publish(Request $request, Post $post)
     {
+        //create new slug
+        $post->update(['slug' => null]);
+
         if($request->user()->can('publish_post')){
             $post->markApproved();
         }

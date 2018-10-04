@@ -35,18 +35,18 @@
         <label class="control-label col-xs-2" for="stype">運動</label>
         <div class="col-xs-5">
           <multiselect :options="['Select option','無','輕度運動','中度運動','重度運動']" :selected.sync="bloods.stype" :multiple="false"
-                       :searchable="false" :close-on-select="false" :show-labels="false" @update="updateSType" label="stype">  </multiselect>
+                       :searchable="false" :close-on-select="false" :show-labels="false" @update="updateSType">  </multiselect>
         </div>
         <div class="col-xs-5">
           <multiselect :options="['Select option','0.5小時','1小時','1.5小時','2小時','2.5小時','3小時','3.5小時','4小時','4.5小時']" :selected.sync="bloods.svalue"
-                       :multiple="false" :searchable="false" :close-on-select="false" :show-labels="false" @update="updateSValue" label="svalue">  </multiselect>
+                       :multiple="false" :searchable="false" :close-on-select="false" :show-labels="false" @update="updateSValue">  </multiselect>
         </div>
       </div>
       <div class="row">
         <label class="control-label col-xs-2" for="btype">低血糖</label>
         <div class="col-xs-3">
           <multiselect :options="['Select option','無','有']" :selected.sync="bloods.btype" :multiple="false" :searchable="false" :close-on-select="false"
-                       :show-labels="false" @update="updateBType" label="btype">  </multiselect>
+                       :show-labels="false" @update="updateBType">  </multiselect>
         </div>
       </div>
       <div class="row">

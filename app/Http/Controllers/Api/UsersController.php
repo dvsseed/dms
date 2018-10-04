@@ -6,6 +6,7 @@ use DB;
 use App\User;
 use App\UserMenu;
 use App\Transformers\UserTransformer;
+use App\Transformers\User1Transformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -240,6 +241,20 @@ class UsersController extends ApiController
     public function getUsersData()
     {
         return User::where('role_level', '<', 9)->select('id', 'name', 'hosp_id', 'email', 'bio')->orderBy('created_at', 'DESC')->get()->toArray();
+    }
+
+    /**
+     * Get the records of username.
+     *
+     * @return \Illuminate\Http\Response
+     *
+     */
+    public function getEducator()
+    {
+//        return urldecode(json_encode($this->respondWith(User::where('bio', 'like', '%衛教師%')->select('id', 'username')->orderBy('username')->get(), new User1Transformer)));
+//        return $this->respondWith(User::where('bio', 'like', '%衛教師%')->select('id', 'username')->orderBy('username')->get(), new User1Transformer);
+        return User::where('bio', 'like', '%衛教師%')->select('id', 'username')->orderBy('username')->get();
+//        return User::where('bio', 'like', '%衛教師%')->select('id', 'username')->orderBy('username')->get()->toArray();
     }
 
     /**

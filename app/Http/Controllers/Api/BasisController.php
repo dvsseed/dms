@@ -76,8 +76,46 @@ class BasisController extends ApiController
     {
         $basis = Basis::where('pid', $pid)->first();
 
-        //Alert::success('You have successfully logged in')->flash();
+        Alert::success('You have successfully logged in')->flash();
         return $this->respondWith($basis, new Basis1Transformer);
+    }
+
+    public function showPid2($pid)
+    {
+        $basis = DB::table('basis')
+            ->leftJoin('tracks', 'tracks.pid', '=', 'basis.pid')
+            ->select('basis.pid', 'basis.name', 'basis.birthday', 'tracks.bloodsugar_source', 'tracks.start_date', 'tracks.end_date')
+            ->where('basis.pid', '=', $pid)
+            ->orderBy('tracks.start_date', 'DESC')
+            ->take(1)
+            ->get();
+            //->paginate($page);
+
+        return $basis;
+    }
+
+    public function getTrack($pid, $sdate)
+    {
+        // list info
+        // $trcks = DB::select(DB::raw("SELECT track_reason FROM tracks LEFT JOIN checks ON checks.pid=cases.pid WHERE (cases.cure_stage='DM年度' OR cases.cure_stage='CKD+DM複診' OR cases.cure_stage='CKD複診+DM年度') AND CONCAT(LEFT(checks.check_date,4)+1911,'-',SUBSTRING(checks.check_date,6,2),'-',RIGHT(checks.check_date,2))=cases.case_date AND checks.pid IS NOT NULL AND (cases.blood_hba1c IS NULL OR cases.blood_ldl IS NULL OR cases.blood_tg IS NULL OR cases.egfr IS NULL OR cases.blood_creat IS NULL OR cases.blood_hba1c = 0 OR cases.blood_ldl = 0 OR cases.blood_tg = 0 OR cases.egfr = 0 OR cases.blood_creat = 0 OR (cases.urine_micro IS NULL AND cases.upcr IS NULL) OR (cases.urine_micro = 0 AND cases.upcr = 0)) AND cases.hosp_id=? ORDER BY cases.pid DESC"), ["$this->hospid"]);
+        $trcks = DB::table('tracks')
+            ->select('track_reason', 'monitor_mode', 'medication', 'adjustprinciple_unit', 'adjustprinciple_isf', 'adjustprinciple_u', 'adjustprinciple_ci_morning', 'adjustprinciple_ci_afternoon', 'adjustprinciple_ci_evening', 'dietplan')
+            ->where('pid', '=', $pid)
+            ->where('start_date', '=', $sdate)
+            ->get();
+
+        return $trcks;
+    }
+
+    public function getContact($pid, $sdate)
+    {
+        $cntcts = DB::table('tracks')
+            ->select('contact_tel', 'contact_mobile', 'track1_contact', 'track1_tel', 'track1_mobile', 'track2_contact', 'track2_tel', 'track2_mobile', 'track3_contact', 'track3_tel', 'track3_mobile')
+            ->where('pid', '=', $pid)
+            ->where('start_date', '=', $sdate)
+            ->get();
+
+        return $cntcts;
     }
 
     public function showBy(Request $request, $page = 20)

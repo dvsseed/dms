@@ -110,6 +110,7 @@ class Post extends Model implements HasMedia
     {
         return Hashids::encode($this->id);
     }
+
     public function getImageUrlAttribute()
     {
         return $this->hasMedia() ? $this->getFirstMedia('featured')->getUrl() : null;

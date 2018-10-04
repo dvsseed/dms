@@ -7,10 +7,12 @@ use App\Mrnote;
 use App\Mresult;
 use App\Basis;
 use App\Bsrange;
+use App\Tracks;
 use Illuminate\Http\Request;
 use App\Transformers\MrnoteTransformer;
 use App\Transformers\MresultTransformer;
 use App\Transformers\BsrangeTransformer;
+use App\Transformers\TracksTransformer;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -21,6 +23,7 @@ class MresultsController extends ApiController
     protected $ip;
     protected $hospid;
     protected $uid;
+    protected $uname;
     protected $useragent;
 
     /**
@@ -38,6 +41,7 @@ class MresultsController extends ApiController
 //        $this->uid = $request->user()->id;
         $this->hospid = Auth::user()->hosp_id;
         $this->uid = Auth::user()->id;
+        $this->uname = Auth::user()->username;
         $this->useragent = $request->header('User-Agent');
     }
 
@@ -197,6 +201,28 @@ class MresultsController extends ApiController
      */
     public function update(Request $request, $id)
     {
+//        return $this->respondWithArray([
+//            'status' => 'error',
+//            'message' => $request->id
+//        ]);
+
+        $tracks = Tracks::findOrFail($id);
+
+        // 先存入上一次data
+        $tracks->educator_previous = $tracks->educator_user_id;
+        $tracks->status_previous = $tracks->trace_status;
+        $tracks->date_previous = $tracks->track_date;
+        $tracks->save();
+
+        // 再存入本次data
+        $tuser = array("id" => $this->uid, "username" => $this->uname);
+        $tracks->educator_user_id = json_encode($tuser, JSON_UNESCAPED_UNICODE);
+        $tracks->trace_status = $request->tracestatus;
+        $tracks->track_date = $request->trackdate;
+        $tracks->save();
+
+        LogsController::saveLog('tracks', 'update(存檔)', $this->ip, $this->useragent);
+        return $this->respondWith($tracks, new TracksTransformer);
     }
 
     public function saveNote(Request $request, $pid)
@@ -475,6 +501,47 @@ class MresultsController extends ApiController
 
         LogsController::saveLog('bsrange', 'store(保存)', $this->ip, $this->useragent);
         return $this->respondWith($bsrange, new BsrangeTransformer);
+    }
+
+    public function trackUndo(Request $request, $id)
+    {
+//        $test = $request->all();
+//        $test = $request->input('mresult');
+//        $test = $request->input('mresult.0.mdate');
+//        return $this->respondWithArray([
+//            'status' => 'error',
+//            'message' => $test
+//        ]);
+
+        $tracks = Tracks::findOrFail($id);
+//        $dpre = 111111;
+//        if ( $tracks->date_previous == null ) {
+//            $dpre = 123789;
+//        }
+//        return $this->respondWithArray([
+//            'status' => 'error',
+//            'message' => $dpre
+//        ]);
+        $undo = false;
+        // 先復原上一次data
+        if ( $tracks->date_previous != null ) {
+            $tracks->educator_user_id = $tracks->educator_previous;
+            $undo = true;
+        }
+        if ( $tracks->status_previous != null ) {
+            $tracks->trace_status = $tracks->status_previous;
+            $undo = true;
+        }
+        if ( $tracks->date_previous != null ) {
+            $tracks->track_date = $tracks->date_previous;
+            $undo = true;
+        }
+        if ( $undo ) {
+            $tracks->save();
+            LogsController::saveLog('tracks', 'update(復原)', $this->ip, $this->useragent);
+        }
+
+        return $this->respondWith($tracks, new TracksTransformer);
     }
 
     public function saveBatch(Request $request, $pid)

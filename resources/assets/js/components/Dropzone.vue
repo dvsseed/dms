@@ -62,11 +62,10 @@
     },
     ready () {
       let component = this
-
-      let previewNode = document.querySelector("#template");
-      previewNode.id = "";
-      let previewTemplate = previewNode.parentNode.innerHTML;
-      previewNode.parentNode.removeChild(previewNode);
+      let previewNode = document.querySelector("#template")
+      previewNode.id = ""
+      let previewTemplate = previewNode.parentNode.innerHTML
+      previewNode.parentNode.removeChild(previewNode)
 
       let myDropzone = new Dropzone(document.getElementById('actions'), { // Make the whole body a dropzone
         url: this.action, // Set the url
@@ -77,47 +76,41 @@
         autoQueue: false, // Make sure the files aren't queued until manually added
         previewsContainer: "#previews", // Define the container to display the previews
         clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-      });
-
+      })
       myDropzone.on("addedfile", function(file) {
         // hide actions
-        document.getElementById('actions').style.display = "none";
+        document.getElementById('actions').style.display = "none"
         // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file); };
-
+        file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
         //set cancel
         document.querySelector("#previews .cancel").onclick = function() {
             // show actions
-            document.getElementById('actions').style.display = "block";
-            myDropzone.removeAllFiles(true);
-        };
-      });
+            document.getElementById('actions').style.display = "block"
+            myDropzone.removeAllFiles(true)
+        }
+      })
 
       // Events regarding update
       myDropzone.on("sending", function(file) {
         // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1";
+        document.querySelector("#total-progress").style.opacity = "1"
         // And disable the start button
-        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
-      });
-
+        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+      })
       myDropzone.on("success", function(response) {
         // update image src
         let imageSrc = JSON.parse(response.xhr.response).image
         document.getElementById('eikona').setAttribute('src', imageSrc)
         // show actions
-        document.getElementById('actions').style.display = "block";
+        document.getElementById('actions').style.display = "block"
         // hide previes
-        document.getElementById('previews').style.display = "none";
-
-        myDropzone.removeAllFiles(true);
-
+        document.getElementById('previews').style.display = "none"
+        myDropzone.removeAllFiles(true)
         console.log(component, imageSrc)
         // update model with the new image
         Vue.set(component, 'model', imageSrc)
-
         console.log(component, component.model)
-      });
+      })
     }
   }
 </script>

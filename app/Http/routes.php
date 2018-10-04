@@ -22,7 +22,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('blog', ['as' => 'web.blog', 'uses' => 'PagesController@home']);
     Route::get('/blog/{posts}', ['as' => 'web.post', 'uses' => 'PagesController@post']);
     Route::get('/category/{categories}', ['as' => 'web.category', 'uses' => 'PagesController@category']);
-
 });
 
 /*
@@ -40,7 +39,7 @@ Route::get('laravel-version', function () {
 Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web'], 'namespace' => 'Api'], function () {
     // posts
     Route::post('posts/{posts}/publish', ['as' => 'api.posts.publish', 'uses' => 'PostsController@publish']);
-    Route::post('posts/{posts}/img', ['as' => 'api.posts.updateImage', 'uses' => 'PostsController@updateImage']);
+    Route::post('posts/{posts}/image', ['as' => 'api.posts.updateImage', 'uses' => 'PostsController@updateImage']);
     Route::resource('posts', 'PostsController', ['except' => ['create', 'edit']]);
 
     // categories
@@ -57,6 +56,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('users/export_excel', ['as' => 'api.users.export_excel', 'uses' => 'UsersController@xlsUsers']);
     Route::get('users/convert_image', ['as' => 'api.users.convert_image', 'uses' => 'UsersController@convertImage']);
     Route::get('users/all', ['as' => 'api.users.all', 'uses' => 'UsersController@allUsers']);
+    Route::get('users/educator', ['as' => 'api.users.educator', 'uses' => 'UsersController@getEducator']);
     Route::get('users/showpage/{page?}', ['as' => 'api.users.showpage', 'uses' => 'UsersController@showPage']);
     Route::resource('users', 'UsersController');
     // Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'store', 'update', 'destroy', 'xlsUsers', 'edit']]);
@@ -78,6 +78,9 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     // basis
     Route::get('basis/showpid/{pid?}', ['as' => 'api.basis.showpid', 'uses' => 'BasisController@showPid']);
     Route::get('basis/showpid1/{pid?}', ['as' => 'api.basis.showpid1', 'uses' => 'BasisController@showPid1']);
+    Route::get('basis/showpid2/{pid?}', ['as' => 'api.basis.showpid2', 'uses' => 'BasisController@showPid2']);
+    Route::get('basis/gettrack/{pid?}/{sdate?}', ['as' => 'api.basis.gettrack', 'uses' => 'BasisController@getTrack']);
+    Route::get('basis/getcontact/{pid?}/{sdate?}', ['as' => 'api.basis.getcontact', 'uses' => 'BasisController@getContact']);
     Route::get('basis/listcase/{pid?}', ['as' => 'api.basis.listcase', 'uses' => 'BasisController@listCase']);
     Route::get('basis/listdata/{pid?}', ['as' => 'api.basis.listdata', 'uses' => 'BasisController@listData']);
     Route::get('basis/importExport', ['as' => 'api.basis.importexport', 'uses' => 'BasisController@importExport']);
@@ -105,6 +108,13 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('basisigtifg/showpid/{pid?}', ['as' => 'api.basisigtifg.showpid', 'uses' => 'BasisIgtifgController@showPid']);
     Route::get('basisigtifg/showpid1/{pid?}', ['as' => 'api.basisigtifg.showpid1', 'uses' => 'BasisIgtifgController@showPid1']);
     Route::resource('basisigtifg', 'BasisIgtifgController');
+
+    // tracks
+    Route::get('tracks/showpage/{page?}', ['as' => 'api.tracks.showpage', 'uses' => 'TracksController@showPage']);
+    Route::get('tracks/showid1/{id?}', ['as' => 'api.tracks.showid1', 'uses' => 'TracksController@showId1']);
+    Route::get('tracks/showpid1/{pid?}', ['as' => 'api.tracks.showpid1', 'uses' => 'TracksController@showPid1']);
+    Route::get('tracks/showpid2/{pid?}', ['as' => 'api.tracks.showpid2', 'uses' => 'TracksController@showPid2']);
+    Route::resource('tracks', 'TracksController');
 
     // cases
     Route::get('cases/showpage/{page?}', ['as' => 'api.cases.showpage', 'uses' => 'CasesController@showPage']);
@@ -175,6 +185,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::patch('mresults/saveblood/{pid?}', ['as' => 'api.mresults.saveblood', 'uses' => 'MresultsController@saveBlood']);
     Route::patch('mresults/savebsrange/{pid?}', ['as' => 'api.mresults.savebsrange', 'uses' => 'MresultsController@saveBsrange']);
     Route::patch('mresults/savebatch/{pid?}', ['as' => 'api.mresults.savebatch', 'uses' => 'MresultsController@saveBatch']);
+    Route::patch('mresults/trackundo/{id?}', ['as' => 'api.mresults.trackundo', 'uses' => 'MresultsController@trackUndo']);
     Route::get('mresults/showbsrange/{pid?}', ['as' => 'api.mresults.showbsrange', 'uses' => 'MresultsController@showBsrange']);
     Route::get('mresults/showmr/{pid?}/{fdate?}/{tdate?}', ['as' => 'api.mresults.showmr', 'uses' => 'MresultsController@showMR']);
     Route::get('mresults/shownote/{pid?}/{fdate?}/{tdate?}', ['as' => 'api.mresults.showpid', 'uses' => 'MresultsController@showNote']);
@@ -183,8 +194,8 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('mresults/showbgbydate/{pid?}/{sdate?}/{edate?}', ['as' => 'api.mresults.showbgbydate', 'uses' => 'MresultsController@showBGbyDate']);
     Route::get('mresults/showbgbyadd/{pid?}/{sdate?}/{edate?}', ['as' => 'api.mresults.showbgbyadd', 'uses' => 'MresultsController@showBGbyAdd']);
     Route::delete('mresults/destroybatch/{id?}', ['as' => 'api.mresults.destroybatch', 'uses' => 'MresultsController@destroyBatch']);
+    Route::resource('mresults', 'MresultsController');
     //Route::delete('mresults/destroybatch/{id?}', function () { echo 'hi';});
-    //Route::resource('mresults', 'MresultsController');
 
 });
 

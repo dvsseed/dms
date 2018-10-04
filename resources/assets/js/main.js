@@ -13,7 +13,7 @@ require('./components/vue-strap/docs/js/showLanguage')
 // window.VueStrap = require('vue-strap/dist/vue-strap.js')
 
 // 开启debug模式
-/* 關閉vue-devtools */
+/* 關閉vue-devtools -- false*/
 Vue.config.devtools = true
 /* 關閉錯誤警告 */
 Vue.config.debug = true
@@ -165,11 +165,21 @@ router.map({
   '/listbasis': {
     component: require('./components/Listbasis.vue')
   },
+  '/tracks': {
+    component: require('./components/Tracks.vue')
+  },
+  '/listtracks': {
+    component: require('./components/Listtracks.vue')
+  },
   '/cases': {
     component: require('./components/Cases.vue')
   },
   '/listcases': {
     component: require('./components/Listcases.vue')
+  },
+  '/edittrack/:trackId/edit': {
+    name: 'edittrack',
+    component: require('./components/Edittrack.vue')
   },
   '/editcase/:caseStage/edit/:caseId': {
     name: 'editcase',

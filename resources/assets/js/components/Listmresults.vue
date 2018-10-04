@@ -110,6 +110,9 @@
             <th>身分證號</th>
             <th>病患姓名</th>
             <th>生日</th>
+            <th>血糖來源</th>
+            <th>開始時間</th>
+            <th>結束時間</th>
             <th>功能</th>
           </tr>
           </thead>
@@ -118,10 +121,125 @@
             <td>{{ basis.pid }}</td>
             <td>{{ basis.name }}</td>
             <td>{{ basis.birthday }}，{{ patientage }} 歲</td>
+            <td>{{ basis.bloodsugar_source }}</td>
+            <td>{{ basis.start_date }}</td>
+            <td>{{ basis.end_date }}</td>
             <td>
               <button v-if="existBsrange" type="button" class="btn btn-info" @click="bsrangeEdit($event, $index)">修改血糖時段、目標值</button>
-              <button v-else type="button" class="btn btn-warning" @click="bsrangeAdd($event, $index)">新增血糖時段、目標值</button>
+              <button v-else type="button" class="btn btn-success" @click="bsrangeAdd($event, $index)">新增血糖時段、目標值</button>
+              <button v-link="{ name: 'batchmresult', params: { basePid: basis.pid } }" type="button" class="btn btn-warning">批次增</button>
+              <button v-link="{ name: 'batchdelbg', params: { basePid: basis.pid } }" type="button" class="btn btn-danger">批次刪</button>
+              <button type="button" id="tracksButton" @click="tracksData(basis.pid, basis.start_date)" class="btn btn-info btn-flat"><i class="fa fa-compress" aria-hidden="true"></i>個管訊息</button>
+              <button type="button" id="contactButton" @click="contactData(basis.pid, basis.start_date)" class="btn btn-info btn-flat"><i class="fa fa-compress" aria-hidden="true"></i>聯絡訊息</button>
             </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bs-example">
+      <sidebar :show.sync="tracksRight" placement="right" header="個管訊息" :width="350">
+        <div class="row">
+          <label for="track_reason"><span class="text-danger">追蹤原因</span></label>
+          <input v-model="listtrack.track_reason" class="form-control disabled" name="track_reason" disabled="true">
+        </div>
+        <div class="row">
+          <label for="monitor_mode"><span class="text-danger">監測模式</span></label>
+          <input v-model="listtrack.monitor_mode" class="form-control disabled" name="monitor_mode" disabled="true">
+        </div>
+        <div class="row">
+          <label for="medication"><span class="text-danger">用藥</span></label>
+          <bs-input name="medication" :value.sync="listtrack.medication" type="textarea" @focus="event = 'focused'" @blur="event = 'blured'" disabled="true"></bs-input>
+        </div>
+        <div class="row">
+          <label for="adjustprinciple_unit"><span class="text-danger">調整原則</span></label><br />
+            <label for="adjustprinciple_unit">加減 </label> {{ listtrack.adjustprinciple_unit }} 單位<br />
+            <label for="adjustprinciple_isf">ISF: </label> {{ listtrack.adjustprinciple_isf }} mg/dl ＋ {{ listtrack.adjustprinciple_u }} U<br />
+            <label for="adjustprinciple_ci_morning">C/I: </label> 早： {{ listtrack.adjustprinciple_ci_morning }} 午： {{ listtrack.adjustprinciple_ci_afternoon }} 晚： {{ listtrack.adjustprinciple_ci_evening }}
+        </div>
+        <div class="row">
+          <label for="dietplan"><span class="text-danger">飲食計劃</span></label><br />
+            {{ listtrack.dietplan }}
+        </div>
+        <div class="aside-footer">
+          <button type="button" class="btn btn-default" @click="tracksRight = false">Close</button>
+        </div>
+      </sidebar>
+    </div>
+
+    <div class="bs-example">
+      <sidebar :show.sync="contactRight" placement="right" header="聯絡訊息" :width="350">
+        <div class="row">
+          <label for="contact_tel"><span class="text-danger">聯絡電話</span></label>
+          <input v-model="listcontact.contact_tel" class="form-control disabled" name="contact_tel" disabled="true">
+        </div>
+        <div class="row">
+          <label for="contact_mobile"><span class="text-danger">聯絡手機</span></label>
+          <input v-model="listcontact.contact_mobile" class="form-control disabled" name="monitor_mode" disabled="true">
+        </div>
+        <div class="row">
+          <label for="track1_contact"><span class="text-danger">追蹤聯繫人1</span></label>
+          {{ listcontact.track1_contact }} 電話: {{ listcontact.track1_tel }} 手機: {{ listcontact.track1_mobile }}
+        </div>
+        <div class="row">
+          <label for="track2_contact"><span class="text-danger">追蹤聯繫人2</span></label>
+          {{ listcontact.track2_contact }} 電話: {{ listcontact.track2_tel }} 手機: {{ listcontact.track2_mobile }}
+        </div>
+        <div class="row">
+          <label for="track3_contact"><span class="text-danger">追蹤聯繫人3</span></label>
+          {{ listcontact.track3_contact }} 電話: {{ listcontact.track3_tel }} 手機: {{ listcontact.track3_mobile }}
+        </div>
+        <div class="aside-footer">
+          <button type="button" class="btn btn-default" @click="contactRight = false">Close</button>
+        </div>
+      </sidebar>
+    </div>
+
+    <div class="box box-success">
+      <div class="box-header with-border">
+        <h3 class="box-title">預定追踪日</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <table class="borderless">
+          <tbody>
+          <tr class="bg-warning">
+            <td class="bg-warning">
+              <bs-input name="track_date" :value.sync="trackdate" disabled></bs-input>
+            </td>
+            <td class="bg-warning"><div class="col-xs-1"></div></td>
+            <th class="bg-danger">今加</th>
+            <td class="bg-danger"><div class="col-xs-1"></div></td>
+            <td class="bg-danger">
+              <multiselect :options="dayoptions" :selected.sync="traceday" :multiple="false" :searchable="false" :close-on-select="false"
+                           :show-labels="false" @update="updateDay">
+              </multiselect>
+            <td class="bg-danger"><div class="col-xs-1"></div></td>
+            <th class="bg-danger">天</th>
+            <td class="bg-warning"><div class="col-xs-1"></div></td>
+            <th class="bg-info">狀態</th>
+            <td class="bg-info"><div class="col-xs-1"></div></td>
+            <td class="bg-info">
+              <v-select name="trace_status" :options="['已完成','未完成']" :value.sync="tracestatus" clear-button></v-select>
+            </td>
+            <td class="bg-warning"><div class="col-xs-1"></div></td>
+            <th class="bg-success">衛教師</th>
+            <td class="bg-success"><div class="col-xs-1"></div></td>
+            <td class="bg-success">
+              <!-- multiselect :options="educators" :selected.sync="tracks.educator_user_id" :multiple="false" :searchable="false" :close-on-select="false"
+                           :show-labels="false" @update="updateEducator" :custom-label="nameWithid" label="id" key="id">  </multiselect -->
+              <bs-input name="track_username" :value.sync="trackusername" disabled></bs-input>
+            </td>
+            <td class="bg-warning"><div class="col-xs-1"></div></td>
+            <td class="bg-warning">
+              <button type="button" class="btn btn-info" @click="trackSave($event, $index)">存檔</button>
+              <button type="button" class="btn btn-danger" @click="trackUndo($event, $index)">復原</button>
+            </td>
+            <td class="bg-warning"><div class="col-xs-1"></div></td>
           </tr>
           </tbody>
         </table>
@@ -206,6 +324,8 @@
   import VueTimepicker from './vue-timepicker.vue'
   import BloodTable from './blood-table.vue'
   import Multiselect from 'vue-multiselect/lib/vue-multiselect.min.js'
+  import sidebar from './vue-strap/src/Aside.vue'
+  import vSelect from './vue-strap/src/Select.vue'
   import { stack_bottomright, show_stack_success, show_stack_error, show_stack_info } from '../Pnotice.js'
 
   export default {
@@ -215,21 +335,28 @@
       bsInput,
       VueTimepicker,
       BloodTable,
-      Multiselect
+      Multiselect,
+      sidebar,
+      vSelect,
     },
     created () {
       this.pid = this.$route.params.basePid
       this.fetchToday()
+      this.fetchDays()
+      this.fetchEducator()
+      this.fetchTrack()
     },
     ready () {
       this.fetchBasis(this.pid)
       this.fetchBsrange(this.pid)
+      this.fetchOwnUser()
     },
     data () {
       return {
         token: csrf_token,
         pid: '',
         basis: {},
+        userowner: {},
         patientage: '',
         currentYear: '',
         fromdate: [],
@@ -237,10 +364,59 @@
         intervalue: {name: '近一個月', ivalue: 2},
         bsrangeModal: false,
         bsrange: {},
+        listtrack: {},
+        listcontact: {},
+        dayoptions: [],
+        traceday: 0,
+        trackdate: '',
+        trackusername: '',
+        tracestatus: '',
+        tracks: {},
+        educators: [],
+        tracksRight: false,
+        contactRight: false,
         existBsrange: false
       }
     },
     methods: {
+      fetchOwnUser () {
+        this.$http({url: '/api/me', method: 'GET'})
+          .then(function (response) {
+            this.$set('userowner', response.data)
+            // console.log(this.userowner.username)
+            this.$set('trackusername', this.userowner.username)
+          })
+          .catch(function(response) {
+            // console.log(response)
+            if (response.data == "Unauthorized." && response.status == 401) {
+              alert('Auto Logout after idle for 20 mins!!')
+              window.location.assign('/auth/logout')
+            }
+          })
+      },
+      fetchEducator () {
+        this.$http({url: '/api/users/educator/', method: 'GET'})
+          .then(function (response) {
+            this.$set('educators', response.data)
+          })
+          .catch(function(response) {
+            // console.log(response)
+          })
+      },
+      fetchTrack () {
+        this.$http({url: '/api/tracks/showpid1/' + this.pid, method: 'GET'}).then(function (response) {
+          // success callback
+          this.$set('tracks', response.data)
+          this.$set('trackdate', this.tracks.track_date)
+          // onsole.log(this.tracks.trace_status)
+          if (this.tracks.trace_status)
+            this.$set('tracestatus', this.tracks.trace_status)
+          else
+            this.$set('tracestatus', '已完成')
+        }, function (response) {
+          // error callback
+        })
+      },
       updateBSrange (bsrange) {
         //console.log(bloods.mr_time)
         this.$http.patch('/api/mresults/savebsrange/' + this.pid, bsrange).then(function (response) {
@@ -313,6 +489,76 @@
             }
           })
       },
+      trackSave (event, index) {
+        // 個案存檔
+        // event.preventDefault();
+        // console.log(this.tracks.id)
+        // console.log(this.traceday)
+        // console.log(this.tracestatus)
+        // console.log(this.trackusername)
+        // return false
+        // 今天加幾日
+        // var today = new Date()
+        // var tdate = new Date()
+        // tdate.setDate(today.getDate() + this.traceday)
+        Date.prototype.addDays = function(days) {
+          this.setDate(this.getDate() + parseInt(days))
+          return this
+        }
+        var tdate = new Date().addDays(this.traceday)
+        var ttdate = tdate.getFullYear() + "-" + (tdate.getMonth() + 1) + "-" + tdate.getDate()
+        // console.log(ttdate)
+        var track = { "id": this.tracks.id, "trackdate": ttdate, "tracestatus": this.tracestatus }
+        // var track = []
+        // track.push( { "id": this., name: 'Yashwant', age: 30 } )
+        // track.push({id:200,name:'Mahesh',age:35})
+        // console.log(track.id)
+        this.$http.patch('/api/mresults/' + track.id, track).then(function (response) {
+//          console.log(response.data)
+          this.$set('trackdate', response.data.track_date)
+          this.$set('tracestatus', response.data.trace_status)
+//          var uname = response.data.educator_user_id
+//          var uuname = uname.substr(-5, 3)
+//          console.log(uuname)
+//          this.$set('trackusername', uuname)
+          this.$set('trackusername', this.trackusername)
+          show_stack_success('個管已存檔!', response)
+//          console.log(this.pid)
+          this.$router.go('/listmresults/' + this.pid)
+        }, function (response) {
+          show_stack_error('個管存檔失敗!', response)
+        })
+        // this.$router.go('/')
+      },
+      trackUndo (event, index) {
+        // 個案復原
+        //console.log(this.pid)
+        //console.log(JSON.stringify(mrdates))
+        Date.prototype.addDays = function(days) {
+          this.setDate(this.getDate() + parseInt(days))
+          return this
+        }
+        var tdate = new Date().addDays(this.traceday)
+        var ttdate = tdate.getFullYear() + "-" + (tdate.getMonth() + 1) + "-" + tdate.getDate()
+        var track = { "id": this.tracks.id, "trackdate": ttdate, "tracestatus": this.tracestatus }
+        this.$http.patch('/api/mresults/trackundo/' + track.id, track).then(function (response) {
+//          console.log(response.data.message)
+          this.$set('trackdate', response.data.track_date)
+          this.$set('tracestatus', response.data.trace_status)
+//          var uname = response.data.educator_user_id
+//          var uuname = uname.substr(-5, 3)
+//          console.log(uuname)
+//          this.$set('trackusername', uuname)
+          this.$set('trackusername', this.trackusername)
+          show_stack_success('個案已復原!', response)
+//          this.$set('mrdates', [])  // 清空
+//          this.fetchBatch(this.mrdate, this.indays.ivalue)  // 預設3天
+//          this.$router.go('/listmresults/' + this.pid)
+        }, function (response) {
+//          console.log(response.data)
+          show_stack_error('個案復原失敗!', response)
+        })
+      },
       addDate (date, days) {
         // 日期加減天數
         var d = new Date(date)
@@ -333,20 +579,67 @@
           i = i + 1
         }
       },
+      fetchDays () {
+        // range = from 0 ~ 30
+        var days = []
+        for (var d = 0; d < 31; d++) {
+          days.push(d)
+        }
+        this.$set('dayoptions', days)
+      },
+      updateEducator (value) {
+        this.tracks.educator_user_id = value
+      },
+      nameWithid ({ id, username }) {
+        return `${id} -[${username}]`
+      },
       fetchBasis (pid) {
-        this.$http({url: '/api/basis/showpid1/' + pid, method: 'GET'})
+        this.$http({url: '/api/basis/showpid2/' + pid, method: 'GET'})
           .then(function (response) {
-            this.$set('basis', response.data)
+            // console.log(response.data[0])
+            this.$set('basis', response.data[0])
             var ptage = this.basis.birthday
             this.patientage = this.currentYear - ( parseInt(ptage.substring(0, 3)) + 1911 )
           })
           .catch(function(response) {
-            console.log(response)
+            // console.log(response)
             if (response.data == "Unauthorized." && response.status == 401) {
               alert('Auto Logout after idle for 20 mins!!')
               window.location.assign('/auth/logout')
             }
           })
+      },
+      tracksData(pid, sdate) {
+        this.$http({url: '/api/basis/gettrack/' + pid + '/' + sdate, method: 'GET'})
+          .then(function (response) {
+            // console.log(response.data[0])
+            if (response.data[0].length == 0) {
+              this.$set('listtrack', [{track_reason: '無資料'}])
+            } else {
+              this.$set('listtrack', response.data[0])
+            }
+          })
+          .catch(function (response) {
+            // console.log(response)
+          })
+        this.tracksRight = true
+      },
+      contactData(pid, sdate) {
+        this.$http({url: '/api/basis/getcontact/' + pid + '/' + sdate, method: 'GET'})
+          .then(function (response) {
+            if (response.data[0].length == 0) {
+              this.$set('listcontact', [{contact_tel: '無資料'}])
+            } else {
+              this.$set('listcontact', response.data[0])
+            }
+          })
+          .catch(function (response) {
+            // console.log(response)
+          })
+        this.contactRight = true
+      },
+      updateDay (value) {
+        this.traceday = value
       },
       fetchBsrange (pid) {
         // 查血糖區間值
@@ -358,7 +651,7 @@
             }
           })
           .catch(function(response) {
-            //console.log(response)
+            // console.log(response)
             if (response.data == "Unauthorized." && response.status == 401) {
               alert('Auto Logout after idle for 20 mins!!')
               window.location.assign('/auth/logout')
@@ -432,6 +725,10 @@
   .table > tbody > tr > td {
     text-align: left !important;
     /* vertical-align: middle; */
+  }
+
+  .borderless {
+    border: none;
   }
 
   /*

@@ -181,9 +181,11 @@
                           <radio :checked.sync="cases.machine_use" value="異常" type="danger">異常</radio>
                         </div>
                         <div class="col-xs-7">
-                          <multiselect :options="['試紙超過三個月','試紙過期','Code不符','分裝','比對&#62;&#177;15%','比對&#62;&#177;15mg/dl','其他']" :selected.sync="cases.machine_exception"
-                                       :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateMachineexception"
-                                       label="machineexception">  </multiselect>
+                          <multiselect :selected.sync="cases.machine_exception"
+                                       :options="['試紙超過三個月', '試紙過期', 'Code不符', '分裝', '比對&#62;&#177;15%', '比對&#62;&#177;15mg/dl', '其他']"
+                                       :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateMachineexception">
+
+                          </multiselect>
                         </div>
                         <div class="col-xs-3">
                           <bs-input name="machine_other" :value.sync="cases.machine_other" placeholder="請填寫!"></bs-input>
@@ -386,12 +388,14 @@
                           <label class="control-label col-xs-3 col-xs-offset-1" for="chh_year">發生日期: 西元年</label>
                           <div class="col-xs-3">
                             <multiselect :options="yearoptions" :selected.sync="cases.chh_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateYear" label="chh_year" :disabled="isNoneH">  </multiselect>
+                                         :show-labels="false" @update="updateYear" :disabled="isNoneH">
+                            </multiselect>
                           </div>
                           <label class="control-label col-xs-2" for="chh_month">月份</label>
                           <div class="col-xs-3">
                             <multiselect :options="monthoptions" :selected.sync="cases.chh_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateMonth" label="chh_month" :disabled="isNoneH">  </multiselect>
+                                         :show-labels="false" @update="updateMonth" :disabled="isNoneH">
+                            </multiselect>
                           </div>
                         </div>
                       </button-group>
@@ -423,12 +427,14 @@
                           <label class="control-label col-xs-3 col-xs-offset-1" for="sh_year">發生日期: 西元年</label>
                           <div class="col-xs-3">
                             <multiselect :options="yearoptions" :selected.sync="cases.sh_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateshYear" label="sh_year" :disabled="isNoneS">  </multiselect>
+                                         :show-labels="false" @update="updateshYear" :disabled="isNoneS">
+                            </multiselect>
                           </div>
                           <label class="control-label col-xs-2" for="sh_month">月份</label>
                           <div class="col-xs-3">
                             <multiselect :options="monthoptions" :selected.sync="cases.sh_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateshMonth" label="sh_month" :disabled="isNoneS">  </multiselect>
+                                         :show-labels="false" @update="updateshMonth" :disabled="isNoneS">
+                            </multiselect>
                           </div>
                         </div>
                       </button-group>
@@ -460,12 +466,14 @@
                           <label class="control-label col-xs-3 col-xs-offset-1" for="bh_year">發生日期: 西元年</label>
                           <div class="col-xs-3">
                             <multiselect :options="yearoptions" :selected.sync="cases.bh_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updatebhYear" label="bh_year" :disabled="isNoneB">  </multiselect>
+                                         :show-labels="false" @update="updatebhYear" :disabled="isNoneB">
+                            </multiselect>
                           </div>
                           <label class="control-label col-xs-2" for="bh_month">月份</label>
                           <div class="col-xs-3">
                             <multiselect :options="monthoptions" :selected.sync="cases.bh_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updatebhMonth" label="bh_month" :disabled="isNoneB">  </multiselect>
+                                         :show-labels="false" @update="updatebhMonth" :disabled="isNoneB">
+                            </multiselect>
                           </div>
                         </div>
                       </button-group>
@@ -487,15 +495,17 @@
                           </div>
                         </div>
                         <div class="row">
-                          <label class="control-label col-xs-3 col-xs-offset-1" for="bh_year">發生日期: 西元年</label>
+                          <label class="control-label col-xs-3 col-xs-offset-1" for="dh_year">發生日期: 西元年</label>
                           <div class="col-xs-3">
                             <multiselect :options="yearoptions" :selected.sync="cases.dh_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updatedhYear" label="dh_year" :disabled="isNoneD">  </multiselect>
+                                         :show-labels="false" @update="updatedhYear" :disabled="isNoneD">
+                            </multiselect>
                           </div>
                           <label class="control-label col-xs-2" for="dh_month">月份</label>
                           <div class="col-xs-3">
                             <multiselect :options="monthoptions" :selected.sync="cases.dh_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updatedhMonth" label="dh_month" :disabled="isNoneD">  </multiselect>
+                                         :show-labels="false" @update="updatedhMonth" :disabled="isNoneD">
+                            </multiselect>
                           </div>
                         </div>
                       </button-group>
@@ -524,15 +534,17 @@
                           </div>
                         </div>
                         <div class="row">
-                          <label class="control-label col-xs-3 col-xs-offset-1" for="bh_year">發生日期: 西元年</label>
+                          <label class="control-label col-xs-3 col-xs-offset-1" for="ah_year">發生日期: 西元年</label>
                           <div class="col-xs-3">
                             <multiselect :options="yearoptions" :selected.sync="cases.ah_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateahYear" label="ah_year" :disabled="isNoneN">  </multiselect>
+                                         :show-labels="false" @update="updateahYear" :disabled="isNoneN">
+                            </multiselect>
                           </div>
-                          <label class="control-label col-xs-2" for="bh_month">月份</label>
+                          <label class="control-label col-xs-2" for="ah_month">月份</label>
                           <div class="col-xs-3">
                             <multiselect :options="monthoptions" :selected.sync="cases.ah_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateahMonth" label="ah_month" :disabled="isNoneN">  </multiselect>
+                                         :show-labels="false" @update="updateahMonth" :disabled="isNoneN">
+                            </multiselect>
                           </div>
                         </div>
                         <div class="row">

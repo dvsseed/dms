@@ -54,13 +54,13 @@
                       <label class="control-label col-xs-1" for="diagnoseyear">西元年</label>
                       <div class="col-xs-3">
                         <multiselect :options="yearoptions" :selected.sync="basisgdm.fall_ill_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                     :show-labels="false" @update="updateYear" label="fall_ill_year">  </multiselect>
+                                     :show-labels="false" @update="updateYear">  </multiselect>
                         <!-- v-select name="fall_ill_year" :options="yearoptions" :value.sync="basisgdm.fall_ill_year" clear-button></v-select -->
                       </div>
                       <label class="control-label col-xs-1" for="diagnosemonth">月份</label>
                       <div class="col-xs-2">
                         <multiselect :options="monthoptions" :selected.sync="basisgdm.fall_ill_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                     :show-labels="false" @update="updateMonth" label="fall_ill_month">  </multiselect>
+                                     :show-labels="false" @update="updateMonth">  </multiselect>
                         <!-- v-select name="fall_ill_month" :options="['01','02','03','04','05','06','07','08','09','10','11','12','不詳']" :value.sync="basisgdm.fall_ill_month" clear-button></v-select -->
                       </div>
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
@@ -69,7 +69,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="currentweeks">目前週數</label>
                       <div class="col-xs-5">
                         <multiselect :options="currentweeksoptions" :selected.sync="basisgdm.currentweeks" :multiple="false" :searchable="true" :close-on-select="false"
-                                     :show-labels="false" @update="updateCurrentweeks" label="currentweeks">  </multiselect>
+                                     :show-labels="false" @update="updateCurrentweeks">  </multiselect>
                       </div>
                       <div class="col-xs-2 col-xs-offset-2"><span> </span></div>
                     </div>
@@ -77,7 +77,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="maternitynumber">孕產次數</label>
                       <div class="col-xs-5">
                         <multiselect :options="maternitynumberoptions" :selected.sync="basisgdm.maternitynumber" :multiple="false" :searchable="true" :close-on-select="false"
-                                     :show-labels="false" @update="updateMaternitynumber" label="maternitynumber">  </multiselect>
+                                     :show-labels="false" @update="updateMaternitynumber">  </multiselect>
                       </div>
                       <div class="col-xs-2 col-xs-offset-2"><span> </span></div>
                     </div>
@@ -85,7 +85,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="gestationaldiabetes">妊娠糖尿病發生次數</label>
                       <div class="col-xs-5">
                         <multiselect :options="gestationaldiabetesoptions" :selected.sync="basisgdm.gestationaldiabetes" :multiple="false" :searchable="true" :close-on-select="false"
-                                     :show-labels="false" @update="updateGestationaldiabetes" label="gestationaldiabetes">  </multiselect>
+                                     :show-labels="false" @update="updateGestationaldiabetes">  </multiselect>
                       </div>
                       <div class="col-xs-2 col-xs-offset-2"><span> </span></div>
                     </div>
@@ -118,19 +118,19 @@
                                 <div class="col-xs-12">
                                   <multiselect :options="['Metformin','SU','Glinide','DPP4-I','SGLT-2','TZD','Acarbose']" :selected.sync="basisgdm.medication"
                                                :multiple="true" :searchable="false" :close-on-select="false" :show-labels="false" @update="updateMedication"
-                                               label="medication" :disabled="isNoneT">  </multiselect>
+                                               :disabled="isNoneT">  </multiselect>
                                 </div>
                               </div>
                               <div class="row">
                                 <label class="control-label col-xs-2" for="medicationyear">西元年</label>
                                 <div class="col-xs-4">
                                   <multiselect :options="yearoptions" :selected.sync="basisgdm.medication_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                               :show-labels="false" @update="updatemYear" label="medication_year" :disabled="isNoneT">  </multiselect>
+                                               :show-labels="false" @update="updatemYear" :disabled="isNoneT">  </multiselect>
                                 </div>
                                 <label class="control-label col-xs-2" for="medicationmonth">月份</label>
                                 <div class="col-xs-4">
                                   <multiselect :options="monthoptions" :selected.sync="basisgdm.medication_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                               :show-labels="false" @update="updatemMonth" label="medication_month" :disabled="isNoneT">  </multiselect>
+                                               :show-labels="false" @update="updatemMonth" :disabled="isNoneT">  </multiselect>
                                 </div>
                               </div>
                             </div>
@@ -144,12 +144,12 @@
                                 <label class="control-label col-xs-2" for="injectionyear">西元年</label>
                                 <div class="col-xs-3">
                                   <multiselect :options="yearoptions" :selected.sync="basisgdm.injection_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updatenYear" label="injection_year" :disabled="isNoneT">  </multiselect>
+                                             :show-labels="false" @update="updatenYear" :disabled="isNoneT">  </multiselect>
                                 </div>
                                 <label class="control-label col-xs-2" for="injectionmonth">月份</label>
                                 <div class="col-xs-3">
                                   <multiselect :options="monthoptions" :selected.sync="basisgdm.injection_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                               :show-labels="false" @update="updatenMonth" label="injection_month" :disabled="isNoneT">  </multiselect>
+                                               :show-labels="false" @update="updatenMonth" :disabled="isNoneT">  </multiselect>
                                 </div>
                               </div>
                             </div>
@@ -196,12 +196,12 @@
                               <label class="control-label col-xs-2" for="injectionyear">西元年</label>
                               <div class="col-xs-3">
                                 <multiselect :options="yearoptions" :selected.sync="basisgdm.glp1_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updateiYear" label="glp1_year" :disabled="isNoneT">  </multiselect>
+                                             :show-labels="false" @update="updateiYear" :disabled="isNoneT">  </multiselect>
                               </div>
                               <label class="control-label col-xs-1" for="injectionmonth">月份</label>
                               <div class="col-xs-3">
                                 <multiselect :options="monthoptions" :selected.sync="basisgdm.glp1_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updateiMonth" label="glp1_month" :disabled="isNoneT">  </multiselect>
+                                             :show-labels="false" @update="updateiMonth" :disabled="isNoneT">  </multiselect>
                               </div>
                               <div class="col-xs-3">
                                 <v-select name="glp1" :options="['無','2次/天','1次/天','1次/周','1次/月']" :value.sync="basisgdm.glp1" clear-button :disabled="isNoneT"></v-select>
@@ -232,7 +232,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['COPD','開放型','非開放性']" :selected.sync="basisgdm.lung"
                                            :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateLung"
-                                           label="lung" :disabled="isNoneC">  </multiselect>
+                                           :disabled="isNoneC">  </multiselect>
                             </div>
                           </div>
                           <div class="row">
@@ -242,7 +242,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['A型肝炎','B型肝炎','C型肝炎','脂肪肝','肝硬化']" :selected.sync="basisgdm.liver"
                                            :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateLiver"
-                                           label="liver" :disabled="isNoneC">  </multiselect>
+                                           :disabled="isNoneC">  </multiselect>
                             </div>
                           </div>
                           <v-checkbox value="甲狀腺疾病" type="warning" :disabled="isNoneC">甲狀腺疾病</v-checkbox>
@@ -253,7 +253,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['失眠','焦慮','憂鬱','躁鬱','精神功能症','失智','其他']" :selected.sync="basisgdm.mental"
                                            :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateMental"
-                                           label="mental" :disabled="isNoneC">  </multiselect>
+                                           :disabled="isNoneC">  </multiselect>
                             </div>
                           </div>
                           <div class="row">
@@ -274,7 +274,7 @@
                         <div class="col-xs-7">
                           <multiselect :options="['不詳','0次','1次','2次','3次','4次','5次','6次','7次','8次','9次','10次']" :selected.sync="basisgdm.gestation"
                                        :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateGestation"
-                                       label="gestation" v-if="isFemale">  </multiselect>
+                                       v-if="isFemale">  </multiselect>
                         </div>
                         <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                       </div>
@@ -283,7 +283,7 @@
                         <div class="col-xs-7">
                           <multiselect :options="['不詳','0次','1次','2次','3次','4次','5次','6次','7次','8次','9次','10次']" :selected.sync="basisgdm.stopgestation"
                                        :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateStopgestation"
-                                       label="stopgestation" v-if="isFemale">  </multiselect>
+                                       v-if="isFemale">  </multiselect>
                         </div>
                         <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                       </div>
@@ -302,7 +302,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['父系','母系','兄弟姐妹','子女','孫子女']" :selected.sync="basisgdm.relatives"
                                            :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateRelatives"
-                                           label="relatives" :disabled="isNoneF">  </multiselect>
+                                           :disabled="isNoneF">  </multiselect>
                             </div>
                           </div>
                           <div class="row">
@@ -312,7 +312,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['父系','母系','兄弟姐妹','子女','孫子女']" :selected.sync="basisgdm.hypertension"
                                            :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateHypertension"
-                                           label="hypertension" :disabled="isNoneF">  </multiselect>
+                                           :disabled="isNoneF">  </multiselect>
                             </div>
                           </div>
                           <div class="row">
@@ -322,7 +322,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['父系','母系','兄弟姐妹','子女','孫子女']" :selected.sync="basisgdm.cardiovascular"
                                            :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateCardiovascular"
-                                           label="cardiovascular" :disabled="isNoneF">  </multiselect>
+                                           :disabled="isNoneF">  </multiselect>
                             </div>
                           </div>
                           <div class="row">
@@ -332,7 +332,7 @@
                             <div class="col-xs-10">
                               <multiselect :options="['父系','母系','兄弟姐妹','子女','孫子女']" :selected.sync="basisgdm.stroke"
                                            :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateStroke"
-                                           label="stroke" :disabled="isNoneF">  </multiselect>
+                                           :disabled="isNoneF">  </multiselect>
                             </div>
                           </div>
                         </button-group>
@@ -343,8 +343,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="activity">活動量</label>
                       <div class="col-xs-7">
                         <multiselect :options="['無','輕','中','重','臥床']" :selected.sync="basisgdm.activity"
-                                     :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateActivity"
-                                     label="activity">  </multiselect>
+                                     :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateActivity">  </multiselect>
                       </div>
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                     </div>
@@ -352,8 +351,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="education">教育程度</label>
                       <div class="col-xs-7">
                         <multiselect :options="['不詳','不識字','識數字','識字','日教','國小','國中','高中','大專','大學','碩士','博士']" :selected.sync="basisgdm.education"
-                                     :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateEducation"
-                                     label="education">  </multiselect>
+                                     :multiple="false" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateEducation">  </multiselect>
                       </div>
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                     </div>
@@ -420,8 +418,7 @@
                       <label class="control-label col-xs-2 col-xs-offset-1" for="affectlearning">影響學習之因素</label>
                       <div class="col-xs-7">
                         <multiselect :options="['聽力障礙','視力障礙','手部不靈活','失聰','失明','智力障礙','情緒因素','疾病因素','其他']" :selected.sync="basisgdm.affectlearning"
-                                     :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateAffectlearning"
-                                     label="affectlearning">  </multiselect>
+                                     :multiple="true" :searchable="true" :close-on-select="false" :show-labels="false" @update="updateAffectlearning">  </multiselect>
                       </div>
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                     </div>
@@ -514,12 +511,12 @@
                             <label class="control-label col-xs-4" for="g6pdyear">診斷日期: 西元年</label>
                             <div class="col-xs-3">
                               <multiselect :options="yearoptions" :selected.sync="basisgdm.g6pd_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                           :show-labels="false" @update="updategYear" label="g6pd_year">  </multiselect>
+                                           :show-labels="false" @update="updategYear">  </multiselect>
                             </div>
                             <label class="control-label col-xs-2" for="g6pdmonth">月份</label>
                             <div class="col-xs-3">
                               <multiselect :options="monthoptions" :selected.sync="basisgdm.g6pd_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                           :show-labels="false" @update="updategMonth" label="g6pd_month">  </multiselect>
+                                           :show-labels="false" @update="updategMonth">  </multiselect>
                             </div>
                           </div>
                         </div>
@@ -541,7 +538,7 @@
                           <div class="col-xs-1"> &nbsp;</div>
                           <div class="col-xs-4">
                             <multiselect :options="['Select option','正常','IFG/IGT','T2DM']" :selected.sync="basisgdm.closed_do" :multiple="false" :searchable="true" :close-on-select="false"
-                                         :show-labels="false" @update="updateCloseddo" label="closed_do">  </multiselect>
+                                         :show-labels="false" @update="updateCloseddo">  </multiselect>
                           </div>
                         </div>
                         <div class="row">
@@ -553,19 +550,19 @@
                               <label class="control-label col-xs-3" for="closedyear">西元年</label>
                               <div class="col-xs-3">
                                 <multiselect :options="yearoptions" :selected.sync="basisgdm.closed_year" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updatecYear" label="closed_year">  </multiselect>
+                                             :show-labels="false" @update="updatecYear">  </multiselect>
                               </div>
                               <label class="control-label col-xs-3" for="closedmonth">月份</label>
                               <div class="col-xs-3">
                                 <multiselect :options="monthoptions" :selected.sync="basisgdm.closed_month" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updatecMonth" label="closed_month">  </multiselect>
+                                             :show-labels="false" @update="updatecMonth">  </multiselect>
                               </div>
                             </div>
                             <div class="row">
                               <label class="control-label col-xs-3" for="closedcause">原因</label>
                               <div class="col-xs-3">
                                 <multiselect :options="['Select option','意外','癌症','疾病','不明原因']" :selected.sync="basisgdm.closedcause" :multiple="false" :searchable="true" :close-on-select="false"
-                                             :show-labels="false" @update="updateCause" label="closedcause">  </multiselect>
+                                             :show-labels="false" @update="updateCause">  </multiselect>
                               </div>
                               <div class="col-xs-6">
                                 <bs-input name="closedreason" :value.sync="basisgdm.closedreason" placeholder="請填寫!"></bs-input>

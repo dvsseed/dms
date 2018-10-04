@@ -1,9 +1,8 @@
 <template>
   <aside class="main-sidebar">
-
+    {{creatingPost}}
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      {{ creatingPost }}
       <!-- Sidebar user panel (optional) -->
       <div v-link="{ path: '/profile' }" class="user-panel">
         <div class="pull-left image">
@@ -33,7 +32,14 @@
           </ul>
         </li>
         <li v-if="menu.menu2"><a v-link="{ path: '/listbasis' }"><i class="fa fa-tint"></i> <span>血糖資料</span></a></li>
-        <li v-if="menu.menu3"><a v-link="{ path: '/' }"><i class="fa fa-list-alt"></i> <span>個案管理</span></a></li>
+
+        <li v-if="menu.menu3" class="treeview">
+          <a href="#"><i class="fa fa-list-alt"></i> <span>個案管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a v-link="{ path: '/tracks' }"><i class="fa fa-plus-square" aria-hidden="true"></i> 新增個管</a></li>
+            <li><a v-link="{ path: '/listtracks' }"><i class="fa fa-table" aria-hidden="true"></i> 個管清單</a></li>
+          </ul>
+        </li>
 
         <li v-if="menu.menu4" class="treeview">
           <a href="#"><i class="fa fa-hospital-o"></i> <span>健保方案</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -138,8 +144,10 @@ export default {
       })
     },
     createPost () {
+      // console.log(this.creatingPost)
       if( !this.creatingPost ){
         this.$http({url: '/api/posts', method: 'POST'}).then(function (response) {
+          console.log(response.data.hashid)
           show_stack_info('新增文章...', response)
           this.$router.go('/posts/'  + response.data.hashid + '/edit')
         }, function (response){

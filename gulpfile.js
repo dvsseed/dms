@@ -20,7 +20,7 @@ require('laravel-elixir-livereload');
 
 elixir(function(mix) {
     mix.browserSync({
-        proxy: 'dmclinicyu.com'
+        proxy: '192.168.1.222'
     });
     mix.less('../themes/clean-blog/clean-blog.less')
     
