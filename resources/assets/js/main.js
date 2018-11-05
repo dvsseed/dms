@@ -194,6 +194,12 @@ router.map({
   '/historyvpn': {
     component: require('./components/Historyvpn.vue')
   },
+  '/medicalrecord': {
+    component: require('./components/Medicalrecord.vue')
+  },
+  '/listmrecords': {
+    component: require('./components/Listmrecords.vue')
+  },
   '/doctors/': {
     name: 'doctors',
     component: require('./components/Doctors.vue')

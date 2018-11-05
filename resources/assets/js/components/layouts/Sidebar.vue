@@ -52,7 +52,13 @@
           </ul>
         </li>
 
-        <li v-if="menu.menu5"><a v-link="{ path: '/' }"><i class="fa fa-list-alt"></i> <span>衛教記錄</span></a></li>
+        <li v-if="menu.menu5" class="treeview">
+          <a href="#"><i class="fa fa-list-alt"></i> <span>衛教記錄</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a v-link="{ path: '/medicalrecord' }"><i class="fa fa-plus-square" aria-hidden="true"></i> 病歷查詢</a></li>
+            <li><a v-link="{ path: '/listmrecords' }"><i class="fa fa-table" aria-hidden="true"></i> SOAP清單</a></li>
+          </ul>
+        </li>
 
         <li v-if="menu.menu6" class="treeview">
           <a href="#"><i class="fa fa-hospital-o"></i> <span>調查</span> <i class="fa fa-angle-left pull-right"></i></a>

@@ -166,6 +166,25 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('vpnhistory/all', ['as' => 'api.vpnhistory.all', 'uses' => 'VpnhistoryController@allVpnhistory']);
     Route::get('rawdatavpn/all', ['as' => 'api.rawdatavpn.all', 'uses' => 'VpnhistoryController@allRawdatavpn']);
 
+    // mrecords
+    Route::get('mrecords/showpage/{page?}', ['as' => 'api.mrecords.showpage', 'uses' => 'MrecordsController@showPage']);
+    Route::get('mrecords/showpage1/{page?}', ['as' => 'api.mrecords.showpage1', 'uses' => 'MrecordsController@showPage1']);
+    Route::get('mrecords/listdata/{pid?}', ['as' => 'api.mrecords.listdata', 'uses' => 'MrecordsController@listData']);
+    Route::get('mrecords/showid1/{id?}', ['as' => 'api.mrecords.showid1', 'uses' => 'MrecordsController@showId1']);
+    Route::get('mrecords/showpid1/{pid?}', ['as' => 'api.mrecords.showpid1', 'uses' => 'MrecordsController@showPid1']);
+    Route::get('mrecords/showpid2/{pid?}', ['as' => 'api.mrecords.showpid2', 'uses' => 'MrecordsController@showPid2']);
+    Route::resource('mrecords', 'MrecordsController');
+
+    // soaps
+    Route::get('soaps/showpage/{page?}', ['as' => 'api.soaps.showpage', 'uses' => 'SoapsController@showPage']);
+    Route::get('soaps/showpage1/{page?}', ['as' => 'api.soaps.showpage1', 'uses' => 'SoapsController@showPage1']);
+    Route::get('soaps/listdata/{pid?}', ['as' => 'api.soaps.listdata', 'uses' => 'SoapsController@listData']);
+    Route::get('soaps/listdate/{pid?}', ['as' => 'api.soaps.listdate', 'uses' => 'SoapsController@listDate']);
+    Route::get('soaps/showid1/{id?}', ['as' => 'api.soaps.showid1', 'uses' => 'SoapsController@showId1']);
+    Route::get('soaps/showpid1/{pid?}', ['as' => 'api.soaps.showpid1', 'uses' => 'SoapsController@showPid1']);
+    Route::get('soaps/showpid2/{pid?}', ['as' => 'api.soaps.showpid2', 'uses' => 'SoapsController@showPid2']);
+    Route::resource('soaps', 'soapsController');
+
     // doctors
     Route::get('doctors/showpage/{page?}', ['as' => 'api.doctors.showpage', 'uses' => 'DoctorsController@showPage']);
     Route::get('doctors/alldoctors', ['as' => 'api.doctors.alldoctors', 'uses' => 'DoctorsController@allDoctors']);
