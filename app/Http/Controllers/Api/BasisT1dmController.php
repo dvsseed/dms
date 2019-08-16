@@ -117,7 +117,7 @@ class BasisT1dmController extends ApiController
         $basist1dm = BasisT1dm::where('pid', $request->pid)->first();
         if ($basist1dm) {
             $this->validate($request, [
-                'pid' => 'required|max:10|unique:basis_t1dm',
+                'pid' => 'required|max:18|unique:basis_t1dm',
             ]);
         }
 

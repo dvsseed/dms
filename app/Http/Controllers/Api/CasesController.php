@@ -431,6 +431,7 @@ class CasesController extends ApiController
             $cases->close_date = date('Y-m-d');
         }
         $cases->case_date = date('Y-m-d');
+        $cases->prsn_id = "G120833360";  // 強迫先預設: 游能俊醫師
         $cases->educator = $this->uid;
         $cases->blood_mne = "早";
         $cases->blood_ap = "前";
@@ -619,6 +620,22 @@ class CasesController extends ApiController
             'success' => true,
             'message' => '刪除健保方案成功!!'
         ]);
+    }
+
+    public function showPid2($pid)
+    {
+        $hid = $this->hospid;
+        $cases = DB::table('cases')
+            ->select('case_date', 'blood_hba1c')
+            ->addSelect(DB::raw('ROUND(blood_hba1c, 1) as hba1c'))
+            ->where('hosp_id', '=', $hid)
+            ->where('pid', '=', $pid)
+            ->where('cure_stage', '!=', '一般')
+            ->orderBy('case_date', 'DESC')
+            ->take(4)
+            ->get();
+
+        return $cases;
     }
 
     /**

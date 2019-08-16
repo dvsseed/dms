@@ -117,7 +117,7 @@ class BasisIgtifgController extends ApiController
         $basisigtifg = BasisIgtifg::where('pid', $request->pid)->first();
         if ($basisigtifg) {
             $this->validate($request, [
-                'pid' => 'required|max:10|unique:basis_igtifg',
+                'pid' => 'required|max:18|unique:basis_igtifg',
             ]);
         }
 

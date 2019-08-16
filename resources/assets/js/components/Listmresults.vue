@@ -259,20 +259,18 @@
           <thead>
           <tr class="bg-info">
             <th>日期</th>
-            <th v-for="hh in 4"> </th>
+            <td v-for="case in cases">{{ case.case_date }}</td>
           </tr>
           </thead>
           <tbody>
           <tr class="bg-warning">
             <td>HbA1C</td>
-            <td v-for="dd in 4"> </td>
+            <td v-for="case in cases">{{ case.hba1c }}</td>
           </tr>
           </tbody>
         </table>
       </div>
-    </div>
 
-    <div class="box box-success">
       <div class="box-header with-border">
         <h3 class="box-title">血糖</h3>
         <div class="box-tools pull-right">
@@ -284,26 +282,30 @@
         <div class="row">
           <label class="control-label col-xs-2 text-danger" for="ivalue">查詢區間</label>
           <div class="col-xs-4">
-            <multiselect :options="[{name:'近二周',ivalue:1},{name:'近一個月',ivalue:2},{name:'近二個月',ivalue:4},{name:'近三個月',ivalue:6},{name:'近半年',ivalue:13},{name:'近一年',ivalue:26}]" :selected.sync="intervalue",
-                         :searchable="true" :close-on-select="false" placeholder="請選查詢區間" label="name" :custom-lable="nameWithInterval" @update="updateinterValue" key="name">  </multiselect>
+            <multiselect
+                    :options="[{name:'近二周',ivalue:1},{name:'近一個月',ivalue:2},{name:'近二個月',ivalue:4},{name:'近三個月',ivalue:6},{name:'近半年',ivalue:13},{name:'近一年',ivalue:26}]"
+                    :selected.sync="intervalue" ,
+                    :searchable="true" :close-on-select="false" placeholder="請選查詢區間" label="name"
+                    :custom-lable="nameWithInterval" @update="updateinterValue" key="name"></multiselect>
           </div>
           <div class="col-xs-1 col-xs-offset-5"><span>{{ intervalue.ivalue }} </span></div>
         </div>
-        <br />
+        <br/>
         <div class="row">
           <div class="col-xs-12">
             <div class="box">
               <div id="printpage" class="box-body table-responsive no-padding">
                 <label for="iconimg" style="vertical-align: middle; text-align: center">
-                  <img src="/img/cross.gif" />：新增血糖 &nbsp;
-                  <img src="/img/hotcafe.gif" />：新增或修改(非正餐飲食) &nbsp;
-                  <img src="/img/rice.gif" />：新增或修改(正餐飲食) &nbsp;
+                  <img src="/img/cross.gif"/>：新增血糖 &nbsp;
+                  <img src="/img/hotcafe.gif"/>：新增或修改(非正餐飲食) &nbsp;
+                  <img src="/img/rice.gif"/>：新增或修改(正餐飲食) &nbsp;
                   *：表有血糖備註
                 </label>
-                <br />
+                <br/>
                 <div v-for="n in intervalue.ivalue">
-                  <blood-table :num="n" :fromdate="fromdate[n]" :todate="todate[n]" :pid="pid" :ivalue="intervalue.ivalue"> </blood-table>
-                  <br />
+                  <blood-table :num="n" :fromdate="fromdate[n]" :todate="todate[n]" :pid="pid"
+                               :ivalue="intervalue.ivalue"></blood-table>
+                  <br/>
                 </div>
               </div>
             </div>
@@ -349,6 +351,7 @@
     ready () {
       this.fetchBasis(this.pid)
       this.fetchBsrange(this.pid)
+      this.fetchCases(this.pid)
       this.fetchOwnUser()
     },
     data () {
@@ -356,6 +359,7 @@
         token: csrf_token,
         pid: '',
         basis: {},
+        cases: [],
         userowner: {},
         patientage: '',
         currentYear: '',
@@ -600,6 +604,20 @@
             this.$set('basis', response.data[0])
             var ptage = this.basis.birthday
             this.patientage = this.currentYear - ( parseInt(ptage.substring(0, 3)) + 1911 )
+          })
+          .catch(function(response) {
+            // console.log(response)
+            if (response.data == "Unauthorized." && response.status == 401) {
+              alert('Auto Logout after idle for 20 mins!!')
+              window.location.assign('/auth/logout')
+            }
+          })
+      },
+      fetchCases (pid) {
+        this.$http({url: '/api/cases/showpid2/' + pid, method: 'GET'})
+          .then(function (response) {
+            // console.log(response.data)
+            this.$set('cases', response.data)
           })
           .catch(function(response) {
             // console.log(response)

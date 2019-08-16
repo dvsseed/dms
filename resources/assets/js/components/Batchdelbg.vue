@@ -181,6 +181,7 @@
         var date = new Date()
         this.currentYear = date.getFullYear()
         this.startdate = ( date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + (date.getDate())).slice(-2) )
+        this.enddate = ( date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + (date.getDate())).slice(-2) )
       },
       fetchBatch (fromdate, days) {
         this.$set('mresults', [])

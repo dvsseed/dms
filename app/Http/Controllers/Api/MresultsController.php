@@ -255,11 +255,6 @@ class MresultsController extends ApiController
 
     public function saveBlood(Request $request, $pid)
     {
-//        return $this->respondWithArray([
-//            'status' => 'error',
-//            'message' => $request->autonote
-//        ]);
-
         $data = $request->mr_time;
         if ($data['HH'])
             $HH = $data['HH'];
@@ -282,6 +277,9 @@ class MresultsController extends ApiController
             $mresults->slotname = $request->slotname;
             $mresults->value1 = $request->value1;
             $mresults->value2 = $request->value2;
+            $mresults->stype = $request->stype;
+            $mresults->svalue = $request->svalue;
+            $mresults->btype = $request->btype;
             $mresults->note = $request->note;
             $mresults->autonote = json_encode($request->autonote, JSON_UNESCAPED_UNICODE);
             $mresults->save();
@@ -298,7 +296,7 @@ class MresultsController extends ApiController
 
         $mresult->hosp_id = $hid;
         $mresult->pid = $pid;
-        //$mresult->mr_date = $request->mr_date;
+        // $mresult->mr_date = $request->mr_date;
 
         $rngarray = array("", "晨起", "早餐前", "早餐後", "中餐前", "中餐後", "晚餐前", "晚餐後", "睡前", "凌晨");
         $key = array_search($request->slotname, $rngarray);
@@ -388,10 +386,34 @@ class MresultsController extends ApiController
         }
 
         $mresult->slotname = $request->slotname;
-        $mresult->value1 = $request->value1;
-        $mresult->value2 = $request->value2;
-        $mresult->note = $request->note;
+        if ($request->value1 != "") {
+            $mresult->value1 = $request->value1;
+        }
+
+        if ($request->value2 != "") {
+            $mresult->value2 = $request->value2;
+        }
+        if ($request->stype != "") {
+            $mresults->stype = $request->stype;
+        }
+        if ($request->svalue != "") {
+            $mresults->svalue = $request->svalue;
+        }
+        if ($request->btype != "") {
+            $mresults->btype = $request->btype;
+        }
+        if ($request->note != "") {
+            $mresult->note = $request->note;
+        }
+//        return $this->respondWithArray([
+//            'status' => 'error',
+//            'message' => empty($request->autonote)
+//        ]);
+        if (!empty($request->autonote)) {
+            $mresults->autonote = json_encode($request->autonote, JSON_UNESCAPED_UNICODE);
+        }
         $mresult->save();
+
         LogsController::saveLog('mresult', 'store(保存)', $this->ip, $this->useragent);
         return $this->respondWith($mresult, new MresultTransformer);
     }

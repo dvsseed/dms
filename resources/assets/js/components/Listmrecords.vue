@@ -43,11 +43,18 @@
                 <th>
                   <a href="#" @click="sortBy('soap_date')" :class="{ active: sortKey == 'soap_date' }">日期
                     <i class="fa {{ faSortsoapdate }}" aria-hidden="true"></i>
+                  </a>
                 </th>
                 <th>
                   <a href="#" @click="sortBy('ename')" :class="{ active: sortKey == 'ename' }">個管人員
                     <i class="fa {{ faSortename }}" aria-hidden="true"></i>
                   </a>
+                </th>
+                <th>
+                  <span style="color: red; ">移除</span>
+                  <input type="checkbox" v-model="allSelected" @click="selectAll()">
+                  <span style="color: violet; ">全選</span>
+                  <button type="button" class="btn btn-danger" @click="deleteAll()">批次移除</button>
                 </th>
                 <th>功能</th>
               </tr>
@@ -57,6 +64,9 @@
                 <td>{{ mrecord.pid }}</td>
                 <td>{{ mrecord.soap_date }}</td>
                 <td>{{ mrecord.ename }}</td>
+                <td>
+                  <input type="checkbox" v-model="mrecordDels" @click="selectBox()" :value="mrecord.id">
+                </td>
                 <td class="col-md-3">
                   <div class="btn-group">
                     <!-- a href="/api/me/{{-- mrecord.hashid --}}" target="blank" class="btn btn-success" role="button">看</a -->
@@ -70,6 +80,7 @@
             </table>
             <div>
               <v-paginator :resource.sync="mrecords" :resource_url="resource_url" :options="options"></v-paginator>
+              <span>Selected Ids: {{ mrecordDels }}</span>
             </div>
           </div>
           <!-- /.box-body -->
@@ -83,11 +94,13 @@
 <script>
   var csrf_token = $('meta[name="csrf-token"]').attr('content')
 
+  // import vCheckbox from './vue-strap/src/Checkbox.vue'
   import VuePaginator from 'vuejs-paginator/dist/vuejs-paginator.min.js'
   import { stack_bottomright, show_stack_success, show_stack_error, show_stack_info } from '../Pnotice.js'
 
   export default {
     components: {
+      // vCheckbox,
       VPaginator: VuePaginator
     },
     created () {
@@ -113,6 +126,9 @@
         hospId: '',
         userowner: {},
         mrecords: {},
+        selected: [],
+        allSelected: false,
+        mrecordDels: [],
         sortKey: '',
         reverse: 1,
         faSortname: 'fa-sort',
@@ -184,6 +200,38 @@
           }
         });
       },
+      selectAll () {
+        this.allSelected = !this.allSelected
+        this.mrecordDels = []
+
+        if (this.allSelected) {  // Check all
+          for (mrecord in this.mrecords) {
+            this.mrecordDels.push(this.mrecords[mrecord].id)
+          }
+        }
+      },
+      selectBox () {
+        this.allSelected = false
+      },
+      deleteAll () {
+        if (confirm("確定要[批次移除]嗎?!")) {
+          var input = this.mrecordDels
+          var ids = {"ids": input.toString()}  // 定義一個物件，要有成對的屬性和值
+          this.$http.post('/api/mrecords/deleteall', ids)
+            .then(function (response) {
+              // console.log(response)
+              // console.log(response.data.message)
+              // this.$set('mrecords', {})
+              show_stack_info('SOAP清單已批次移除!!', response)
+              // this.$router.go('/listmrecords')
+              window.location.assign('/dashboard/listmrecords')
+            })
+            .catch(function(response) {
+              // console.log(response.data)
+              console.log(response)
+            })
+        }
+      },
       createMrecord () {
         if (confirm("確定新增嗎?!")) {
           this.$http({url: '/api/mrecords', method: 'POST'})
@@ -254,7 +302,7 @@
       isPage: function () {
         // if ($('select[name="page_length"] option[value="10"]').is(':selected')){
         return (this.thispage == 20)
-      }
+      },
     }
   }
 </script>

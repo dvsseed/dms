@@ -41,7 +41,8 @@
                     <div class="row">
                       <label class="control-label col-xs-2 col-xs-offset-1" for="pid"><span class="text-danger">*病患身份證號</span></label>
                       <div class="col-xs-7">
-                        <bs-input name="pid" :value.sync="basis.pid" pattern="^[A-Z][1-2][0-9]+$" maxlength="10" :mask="mask" placeholder="請輸入...身份證字號" required></bs-input>
+                        <bs-input name="pid" :value.sync="basis.pid" maxlength="18" :mask="mask" placeholder="請輸入...身份證字號" required></bs-input>
+                        <!-- pattern="^[A-Z][1-2][0-9]+$" -->
                       </div>
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                     </div>
@@ -531,12 +532,20 @@
           if (total % 10 == 0) {
             return true
           } else {
-            alert('*  身份證號驗證計算錯誤！')
-            return false
+            // alert('*  身份證號驗證計算錯誤！')
+            if(confirm('*  身份證號驗證計算錯誤！\n\n是否照常作業?!')) {
+              return true
+            } else {
+              return false
+            }
           }
         } else {
-          alert('*  身份證號基本格式錯誤！')
-          return false
+          // alert('*  身份證號基本格式錯誤！')
+          if(confirm('*  身份證號基本格式錯誤！\n\n是否照常作業?!')) {
+            return true
+          } else {
+            return false
+          }
         }
       },
       checkBirthday () {

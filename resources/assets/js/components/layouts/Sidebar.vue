@@ -17,7 +17,7 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" style="font-size: 16px;">
-        <li v-if="!isPatient"><a v-link="{ path: '/' }"><i class="fa fa-home" style="color:orange"></i> <span style="color:orange">數據儀表</span></a></li>
+        <!-- li v-if="!isPatient"><a v-link="{ path: '/' }"><i class="fa fa-home" style="color:orange"></i> <span style="color:orange">數據儀表</span></a></li -->
 
         <!-- Optionally, you can add icons to the links -->
 
@@ -60,41 +60,41 @@
           </ul>
         </li>
 
-        <li v-if="menu.menu6" class="treeview">
-          <a href="#"><i class="fa fa-hospital-o"></i> <span>調查</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a v-link="{ path: '/' }"><i class="fa fa-plus-square" aria-hidden="true"></i> 注射檢核</a></li>
-          </ul>
-        </li>
+        <!-- li v-if="menu.menu6" class="treeview" -->
+          <!-- a href="#"><i class="fa fa-hospital-o"></i> <span>調查</span> <i class="fa fa-angle-left pull-right"></i></a -->
+          <!-- ul class="treeview-menu" -->
+            <!-- li><a v-link="{ path: '/' }"><i class="fa fa-plus-square" aria-hidden="true"></i> 注射檢核</a></li -->
+          <!-- /ul -->
+        <!-- /li -->
 
-        <li v-if="menu.menu7"><a v-link="{ path: '/' }"><i class="fa fa-list-alt"></i> <span>計畫管理</span></a></li>
+        <!-- li v-if="menu.menu7"><a v-link="{ path: '/' }"><i class="fa fa-list-alt"></i> <span>計畫管理</span></a></li -->
 
-        <li v-if="menu.menu8"><a v-link="{ path: '/report' }"><i class="fa fa-line-chart"></i> <span>品質報表</span></a></li>
+        <!-- li v-if="menu.menu8"><a v-link="{ path: '/report' }"><i class="fa fa-line-chart"></i> <span>品質報表</span></a></li -->
 
         <!-- div v-for="menu in menus">
           {{-- menu.content --}}
         </div -->
 
-        <li v-if="isAdmin" class="treeview">
-          <a href="#"><i class="fa fa-list" style="color:violet"></i> <span style="color:violet">公告管理</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a v-link="{ path: '/posts' }"><i class="fa fa-tasks"></i> 所有文章</a></li>
-            <li><a @click="createPost" href="#"><i class="fa fa-file-text" aria-hidden="true"></i> 新增文章</a></li>
-          </ul>
-        </li>
+        <!-- li v-if="isAdmin" class="treeview" -->
+          <!--  a href="#"><i class="fa fa-list" style="color:violet"></i> <span style="color:violet">公告管理</span> <i class="fa fa-angle-left pull-right"></i></a -->
+          <!-- ul class="treeview-menu" -->
+            <!-- li><a v-link="{ path: '/posts' }"><i class="fa fa-tasks"></i> 所有文章</a></li -->
+            <!-- li><a @click="createPost" href="#"><i class="fa fa-file-text" aria-hidden="true"></i> 新增文章</a></li -->
+          <!-- /ul -->
+        <!-- /li-->
         <!-- li><a v-link="{ path: '/categories' }"><i class="fa fa-th-large"></i> <span>Categories</span></a></li -->
-        <li v-if="isAdmin" class="treeview">
-          <a href="#"><i class="fa fa-phone-square" style="color:yellowgreen"></i> <span style="color:yellowgreen">通知</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a v-link="{ path: '/telegram' }"><i class="fa fa-telegram"></i> Telegram傳訊</a></li>
-            <li><a v-link="{ path: '/emailto' }"><i class="fa fa-envelope" aria-hidden="true"></i> Email寄信</a></li>
-          </ul>
-        </li>
+        <!-- li v-if="isAdmin" class="treeview" -->
+          <!-- a href="#"><i class="fa fa-phone-square" style="color:yellowgreen"></i> <span style="color:yellowgreen">通知</span> <i class="fa fa-angle-left pull-right"></i></a -->
+          <!-- ul class="treeview-menu" -->
+            <!-- li><a v-link="{ path: '/telegram' }"><i class="fa fa-telegram"></i> Telegram傳訊</a></li -->
+            <!-- li><a v-link="{ path: '/emailto' }"><i class="fa fa-envelope" aria-hidden="true"></i> Email寄信</a></li -->
+          <!-- /ul -->
+        <!-- /li -->
 
         <li v-if="isManager"><a v-link="{ path: '/doctors' }"><i class="fa fa-user-md" style="color:red"></i> <span style="color:red">VPN管理</span></a></li>
         <li v-if="isManager"><a v-link="{ path: '/users' }"><i class="fa fa-users" style="color:red"></i> <span style="color:red">使用者管理</span></a></li>
         <li v-if="isManager"><a v-link="{ path: '/menus' }"><i class="fa fa-user-secret" style="color:red"></i> <span style="color:red">權限管理</span></a></li>
-        <li v-if="isManager"><a v-link="{ path: '/logs' }"><i class="fa fa-object-group" style="color:red"></i> <span style="color:red">追蹤管理</span></a></li>
+        <!-- li v-if="isManager"><a v-link="{ path: '/logs' }"><i class="fa fa-object-group" style="color:red"></i> <span style="color:red">追蹤管理</span></a></li -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>

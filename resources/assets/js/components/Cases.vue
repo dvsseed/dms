@@ -204,6 +204,16 @@
                       <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
                     </div>
                     <div class="row">
+                      <label class="control-label col-xs-2 col-xs-offset-1" for="tall"><span class="text-danger">*身高</span></label>
+                      <div class="col-xs-5">
+                        <bs-input name="base_tall" :value.sync="cases.base_tall" required></bs-input>
+                      </div>
+                      <div class="col-xs-2">
+                        cm
+                      </div>
+                      <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
+                    </div>
+                    <div class="row">
                       <label class="control-label col-xs-2 col-xs-offset-1" for="bw"><span class="text-danger">*體重</span></label>
                       <div class="col-xs-3">
                         <bs-input name="base_weight" :value.sync="cases.base_weight" required></bs-input>

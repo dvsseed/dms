@@ -276,7 +276,7 @@ class BasisController extends ApiController
 
         $this->validate($request, [
             'hosp_id' => 'required',
-            'pid' => 'required|max:10|unique:basis',
+            'pid' => 'required|max:18|unique:basis',
             'birthday' => 'required'
         ]);
 

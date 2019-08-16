@@ -23,7 +23,7 @@ elixir(function(mix) {
         proxy: '192.168.1.222'
     });
     mix.less('../themes/clean-blog/clean-blog.less')
-    
+
     mix.browserify('main.js')
     mix.browserify('theme.js')
     mix.version(['public/js/main.js', 'public/js/theme.js']);

@@ -4,6 +4,8 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "acorn": "^6.2.1",
+    "ajv": "^6.10.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.9.0",
@@ -13,10 +15,10 @@
     "babel-runtime": "^6.9.2",
     "babelify": "^7.3.0",
     "bootstrap-sass": "^3.3.6",
-    "css-loader": "^0.23.1",
+    "css-loader": "^3.2.0",
     "gulp": "^3.9.1",
-    "gulp-livereload": "^3.8.1",
-    "jquery": "^3.0.0",
+    "gulp-livereload": "^4.0.1",
+    "jquery": "^3.4.1",
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-livereload": "~1.1.6",
     "laravel-elixir-vueify": "^1.0.3",
@@ -31,14 +33,13 @@
     "vue-multiselect": "^1.1.5",
     "vue-resource": "0.8.0",
     "vue-router": "^0.7.13",
-    "vue-strap": "^1.1.32",
+    "vue-strap": "^1.1.40",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "2.0.5",
     "vue-time-picker": "^0.2.3",
     "vue-validator": "2.1.7",
     "vueify": "^8.5.4",
     "vuejs-paginator": "^1.0.14",
-    "webpack": "^1.13.1"
+    "webpack": "^4.39.1"
   },
   "name": "vuejs-news",
   "description": "[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework) [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework) [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)",
@@ -49,7 +50,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.7",
     "browserify": "^13.1.1",
     "chai": "^4.1.2",
     "dropzone": "^4.3.0",

@@ -11,7 +11,8 @@
       <div class="row">
         <label class="control-label col-xs-2 col-xs-offset-1" for="pid"><span class="text-danger">身份證號</span></label>
         <div class="col-xs-7">
-          <bs-input name="pid" :value.sync="baseBy.pid" pattern="^[A-Z][1-2][0-9]+$" maxlength="10" :mask="mask"></bs-input>
+          <bs-input name="pid" :value.sync="baseBy.pid" maxlength="18" :mask="mask"></bs-input>
+          <!-- pattern="^[A-Z][1-2][0-9]+$" -->
         </div>
         <div class="col-xs-1 col-xs-offset-1"><span> </span></div>
       </div>

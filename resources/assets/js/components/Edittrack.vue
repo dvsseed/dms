@@ -294,7 +294,8 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-          <button type="button" :disabled="!valid.update" @click="updateTrack(tracks)" class="btn btn-lg btn-primary btn-flat">
+          <!-- button type="button" :disabled="!valid.update" @click="updateTrack(tracks)" class="btn btn-lg btn-primary btn-flat" -->
+          <button type="button" @click="updateTrack(tracks)" class="btn btn-lg btn-primary btn-flat">
             <i class="fa fa-cloud" aria-hidden="true"></i> 存</button>
           <!-- button type="button" @click="deleteTrack(tracks)" class="btn btn-lg btn-danger btn-flat"><i class="fa fa-trash-o" aria-hidden="true"></i> 刪</button -->
         </div>

@@ -120,6 +120,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('cases/showpage/{page?}', ['as' => 'api.cases.showpage', 'uses' => 'CasesController@showPage']);
     Route::get('cases/showall', ['as' => 'api.cases.showall', 'uses' => 'CasesController@showAll']);
     Route::get('cases/showid1/{id?}', ['as' => 'api.cases.showid1', 'uses' => 'CasesController@showId1']);
+    Route::get('cases/showpid2/{pid?}', ['as' => 'api.cases.showpid2', 'uses' => 'CasesController@showPid2']);
     Route::patch('cases/checkpid/{pid?}', ['as' => 'api.cases.checkpid', 'uses' => 'CasesController@checkPid']);
     Route::post('cases/closecase', ['as' => 'api.cases.closecase', 'uses' => 'CasesController@closeCase']);
     Route::get('cases/listdmcase/{pid?}', ['as' => 'api.cases.listdmcase', 'uses' => 'CasesController@listDMCase']);
@@ -173,6 +174,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['api', 'auth', 'timeout', 'web
     Route::get('mrecords/showid1/{id?}', ['as' => 'api.mrecords.showid1', 'uses' => 'MrecordsController@showId1']);
     Route::get('mrecords/showpid1/{pid?}', ['as' => 'api.mrecords.showpid1', 'uses' => 'MrecordsController@showPid1']);
     Route::get('mrecords/showpid2/{pid?}', ['as' => 'api.mrecords.showpid2', 'uses' => 'MrecordsController@showPid2']);
+    Route::post('mrecords/deleteall', ['as' => 'api.mrecords.deleteall', 'uses' => 'MrecordsController@deleteAll']);
     Route::resource('mrecords', 'MrecordsController');
 
     // soaps

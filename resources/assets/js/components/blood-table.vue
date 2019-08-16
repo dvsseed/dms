@@ -742,10 +742,13 @@
       bloodAdd (event, index, slotname) {
         var bd = event.currentTarget.name
         this.$set('bloods.mr_date', bd.substr(0, 10))
-        this.$set('bloods.mr_time',  { HH: "00", mm: "00", ss: "00" })
+        this.$set('bloods.mr_time', { HH: "00", mm: "00", ss: "00" })
         this.$set('bloods.slotname', slotname)
         this.$set('bloods.value1', '')
         this.$set('bloods.value2', '')
+        this.$set('bloods.stype', '')
+        this.$set('bloods.svalue', '')
+        this.$set('bloods.btype', '')
         this.$set('bloods.note', '')
         this.$set('bloods.autonote', '')
         this.$set('itypes', [])
@@ -828,14 +831,19 @@
         // this.bloods = {}
         this.bloodModal = false
         // refresh blood glucose
-        // this.$router.go('/listmresults/' + this.pid) // invalid
+        // console.log(this.pid)
+        // this.$router.go('/listmresults/' + this.pid)
+        // vue router 失效, 強制使用 javascript 跳轉指定頁面
+        window.location.href = '/dashboard/listmresults/' + this.pid
         // console.log(this.fromdate)
-        this.showTR(this.fromdate, this.todate, this.pid)
+        // this.showTR(this.fromdate, this.todate, this.pid)
+        // alert('跳轉視窗!!')
       },
       updateFood (food) {
         this.foodModal = false
         // refresh blood glucose
-        this.showTR(this.fromdate, this.todate, this.pid)
+        // this.showTR(this.fromdate, this.todate, this.pid)
+        window.location.href = '/dashboard/listmresults/' + this.pid
       },
       updateMemo (umemo) {
         // event.preventDefault();
@@ -849,7 +857,8 @@
         // this.memos = {}
         this.memoModal = false
         // refresh blood glucose
-        this.showTR(this.fromdate, this.todate, this.pid)
+        // this.showTR(this.fromdate, this.todate, this.pid)
+        window.location.href = '/dashboard/listmresults/' + this.pid
       },
       shNB (event, index) {
         var mo = event.currentTarget.id
@@ -1241,7 +1250,16 @@
     },
 
     computed: {
+    },
+
+    destroyed: function () {
+      // console.group('<====== destroyed ======>')
+      // console.log("%c%s", "color:red", "el     : ", this.$el)
+      // console.log("%c%s", "color:red", "data   : ", this.$data)
+      // console.groupEnd('<====== destroyed ======>')
+      // this.$router.go('/listmresults/' + this.pid)
     }
+
   }
 </script>
 

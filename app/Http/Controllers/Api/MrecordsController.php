@@ -257,7 +257,8 @@ class MrecordsController extends ApiController
         $mrecords->pid = $request->pid;
         $mrecords->soap_date = date('Y-m-d');
         $mrecords->add_user_id = $this->uid;
-        $mrecords->educator_user_id = $request->educator_user_id;
+//        $mrecords->educator_user_id = $request->educator_user_id;
+        $mrecords->educator_user_id = json_encode($request->educator_user_id, JSON_UNESCAPED_UNICODE);
         // $mrecords->dietplan = json_encode(["一般"], JSON_UNESCAPED_UNICODE);
 
         $mrecords->save();
@@ -349,13 +350,32 @@ class MrecordsController extends ApiController
     public function destroy(Request $request, $id)
     {
         $mrecords = Mrecords::findOrFail($id);
-        $mrecords->delete();
+        $mrecords->close_date = date('Y-m-d');
+        $mrecords->save();
+//        $mrecords->delete();  // 不是真的要刪除, 僅做軟刪除
 
-        LogsController::saveLog('mrecords', 'destroy(删除)', $this->ip, $this->useragent);
+        LogsController::saveLog('mrecords', 'destroy(删除至歷史)', $this->ip, $this->useragent);
         return $this->respondWithArray([
             'success' => true,
             'message' => '刪除個管成功!!'
         ]);
+    }
+
+    public function deleteAll(Request $request)
+    {
+//        return $this->respondWithArray([
+//            'status' => 'error',
+//            'message' => $request->ids
+//        ]);
+        try {
+            DB::update(DB::raw("UPDATE `mrecords` SET `close_date` = CURRENT_DATE() WHERE id in (" . $request->ids . ")"));
+        } catch(\Exception $e) {
+            $errormsg = 'Database error::' . $e->getCode();
+            return $this->respondWithArray([
+                'status' => 'error',
+                'message' => $errormsg
+            ]);
+        }
     }
 
 }

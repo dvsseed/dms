@@ -117,7 +117,7 @@ class BasisGdmController extends ApiController
         $basisgdm = BasisGdm::where('pid', $request->pid)->first();
         if ($basisgdm) {
             $this->validate($request, [
-                'pid' => 'required|max:10|unique:basis_gdm',
+                'pid' => 'required|max:18|unique:basis_gdm',
             ]);
         }
 

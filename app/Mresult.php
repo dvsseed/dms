@@ -18,6 +18,6 @@ class Mresult extends Model
      *
      * @var array
      */
-    protected $fillable = ['basis_id', 'hosp_id', 'pid', 'mr_date', 'mr_time', 'slot', 'slotname', 'value1', 'value2', 'value3', 'note', 'autonote', 'mdataid', 'modifyid', 'diaryid'];
+    protected $fillable = ['basis_id', 'hosp_id', 'pid', 'mr_date', 'mr_time', 'slot', 'slotname', 'value1', 'value2', 'value3', 'stype', 'svalue', 'btype', 'note', 'autonote', 'mdataid', 'modifyid', 'diaryid'];
 
 }
