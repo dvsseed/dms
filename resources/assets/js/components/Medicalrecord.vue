@@ -368,6 +368,7 @@
 //          var input = this.medicalrecords
           this.$http.post('/api/mrecords', mlrecord)
             .then(function (response) {
+              // console.log(response.data.message)
               show_stack_info('已新增', response)
 //              var id = response.data.id
 //              this.$http({url: '/api/mrecords/showid1/' + id, method: 'GET'})

@@ -239,7 +239,8 @@ class MrecordsController extends ApiController
     {
 //        return $this->respondWithArray([
 //            'status' => 'error',
-//            'message' => '測試中!!'
+//            'message' => $request->educator_user_id
+////            'message' => '測試中!!'
 //        ]);
 
         // 尋找 Mrecords[pid]
@@ -257,8 +258,8 @@ class MrecordsController extends ApiController
         $mrecords->pid = $request->pid;
         $mrecords->soap_date = date('Y-m-d');
         $mrecords->add_user_id = $this->uid;
-//        $mrecords->educator_user_id = $request->educator_user_id;
-        $mrecords->educator_user_id = json_encode($request->educator_user_id, JSON_UNESCAPED_UNICODE);
+        $mrecords->educator_user_id = $request->educator_user_id;
+//        $mrecords->educator_user_id = json_encode($request->educator_user_id, JSON_UNESCAPED_UNICODE);
         // $mrecords->dietplan = json_encode(["一般"], JSON_UNESCAPED_UNICODE);
 
         $mrecords->save();
