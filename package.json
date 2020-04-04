@@ -4,7 +4,7 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
-    "acorn": "^6.2.1",
+    "acorn": "^6.4.1",
     "ajv": "^6.10.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.2.4",
